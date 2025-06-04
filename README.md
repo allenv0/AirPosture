@@ -13,9 +13,7 @@
 <div align="center">
     <img src="App-Assets/Air.gif" alt="demo" width="700" />
 </div>
-Sure! Here’s a concise and polished **README** in English summarizing all the steps you performed:
 
----
 
 ## README: How to Set Up and Run the Project on macOS
 

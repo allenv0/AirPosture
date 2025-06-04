@@ -65,9 +65,6 @@ Sure! Here’s a concise and polished **README** in English summarizing all the 
 
 8. **Build and run the app in Xcode** by selecting the desired simulator and clicking the **Run** button.
 
----
-
-Let me know if you’d like to adjust this further (e.g., add project-specific details, usage instructions, or contribution notes)!
 
 
 ## Acknowledgments

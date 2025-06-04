@@ -14,8 +14,7 @@
     <img src="App-Assets/Air.gif" alt="demo" width="700" />
 </div>
 
-
-## README: How to Set Up and Run the Project on macOS
+How to Set Up and Run the Project on macOS
 
 1. **Install Homebrew (if not already installed):**
 
@@ -61,7 +60,13 @@
    * Go to `Xcode → Settings → Components`
    * Download the iOS 18.4 Simulator
 
-8. **Build and run the app in Xcode** by selecting the desired simulator and clicking the **Run** button.
+8. **Update the build destination in Xcode:**
+
+   * In the top-left corner of Xcode, locate the build target selector.
+   * Click it and change the destination from “My Mac” to an iOS simulator (e.g., “iPhone 15”).
+   * This ensures the app is built and run on an iOS device instead of macOS.
+
+9. **Build and run the app in Xcode** by selecting the desired simulator and clicking the **Run** button.
 
 
 

@@ -2,6 +2,7 @@ import SwiftUI
 import SceneKit
 import CoreMotion
 import Combine
+import AppKit
 
 struct ContentView: View {
     @StateObject private var headphoneMotionManager = HeadphoneMotionManager()
@@ -106,7 +107,7 @@ struct ContentView: View {
                             .padding(.horizontal)
                             .padding(.bottom, 20)
                             
-                            Spacer(minLength: UIScreen.main.bounds.height * 0.1)
+                            Spacer(minLength: NSScreen.main?.frame.height ?? 800 * 0.1)
                         }
                         
                     } else {
@@ -329,7 +330,7 @@ public struct PitchGraphView: View {
     }
     
     private var graphHeight: CGFloat = 120
-    private var graphWidth: CGFloat = UIScreen.main.bounds.width - 60
+    private var graphWidth: CGFloat = (NSScreen.main?.frame.width ?? 800) - 60
     
     private var normalizedData: [CGFloat] {
         guard !dataPoints.isEmpty else { return [] }

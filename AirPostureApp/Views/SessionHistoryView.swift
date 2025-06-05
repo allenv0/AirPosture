@@ -385,7 +385,7 @@ struct SessionHistoryView: View {
                 }
             }
         }
-        .listStyle(.insetGrouped)
+//        .listStyle(.insetGrouped) // not supported on macOS, comment out for now
     }
 }
 

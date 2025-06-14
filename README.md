@@ -20,7 +20,7 @@
 </div>
 
 <div align="center">
-    <img src="App-Assets/Air6.gif" alt="demo" width="700" />
+    <img src="App-Assets/30.gif" alt="demo" width="700" />
 </div>
 
 

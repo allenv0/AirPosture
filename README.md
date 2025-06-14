@@ -8,7 +8,7 @@
 <p>
 
   <br />
-  - 🚧 <strong>Status:</strong> Work in progress — the app will be launching soon. Thank you for the support!
+  - 🚧 <strong>Status:</strong> Work in progress — the iOS & macOS app will be launching soon. Thank you for the support!
   <br />
   - 🧭 <strong>Follow updates on <a href="https://x.com/allenleev0" target="_blank">X</a></strong>
 </p>
@@ -16,7 +16,11 @@
 ## Demo
 
 <div align="center">
-    <img src="App-Assets/Air2.gif" alt="demo" width="700" />
+    <img src="App-Assets/Air6.gif" alt="demo" width="700" />
+</div>
+
+<div align="center">
+    <img src="App-Assets/Air6.gif" alt="demo" width="700" />
 </div>
 
 

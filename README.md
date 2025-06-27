@@ -13,7 +13,7 @@
     <a href="mailto:allen@airposture.pro">Report Bug or Request Feature</a>
   </p>
   <p align="center">
-  <a href="https://www.airposture.pro/mac">
+  <a href="https://www.airposture.pro/mac/AirPosture-0.1.dmg">
     <img width="300" src="App-Assets/download.png">
   </a>
 </p>

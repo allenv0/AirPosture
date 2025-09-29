@@ -1,9 +1,8 @@
-# AirPosture
-
 <p align="center">
   <img src="App-Assets/air-grey.png" width="200" height="200" />
 </p>
 <h1 align="center">AirPosture</h1>
+
 <p>
 <p align="center">
     Turn your AirPods into a posture coach on macOS & iOS. AirPosture uses your AirPods' sensors to catch bad posture in real time.
@@ -19,6 +18,9 @@
   </a>
 </p>
 
+* 🚧 **Status:** alpha stage
+
+* 📌 **Work in progress** — Version 1.0 expected late 2025
   
 </p>
 

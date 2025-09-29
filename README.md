@@ -1,7 +1,7 @@
 # AirPosture
 
 <p align="center">
-  <img src="App-Assets/bear-silver.png" width="200" height="200" />
+  <img src="App-Assets/air-grey.png" width="200" height="200" />
 </p>
 <h1 align="center">AirPosture</h1>
 <p>

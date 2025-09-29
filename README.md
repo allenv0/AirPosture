@@ -1,27 +1,25 @@
 # AirPosture
 
 <p align="center">
-  <img src="App-Assets/A1.png" width="200" height="200" />
+  <img src="App-Assets/bear-silver.png" width="200" height="200" />
 </p>
 <h1 align="center">AirPosture</h1>
 <p>
 <p align="center">
     Turn your AirPods into a posture coach on macOS & iOS. AirPosture uses your AirPods' sensors to catch bad posture in real time.
     <br />
-    <a href="https://www.airposture.pro/">Website</a>
-    ·
-    <a href="mailto:allen@airposture.pro">Report Bug or Request Feature</a>
+    
   </p>
   <p align="center">
-  <a href="https://www.airposture.pro/mac/AirPosture-0.1.dmg">
+  <a href="https://airposture.vercel.app/mac/AirPosture-0.1.dmg">
     <img width="300" src="App-Assets/download.png">
+  </a>
+    <a href="https://testflight.apple.com/join/ATvtBUZH">
+    <img width="300" src="App-Assets/ios-banner.png">
   </a>
 </p>
 
-  <br />
-  - 🚧 <strong>Status:</strong> alpha stage
-  <br />
-  - 🧭 <strong>Follow updates on <a href="https://x.com/allenleev0" target="_blank">X</a></strong>
+  
 </p>
 
 ## Demo
@@ -35,6 +33,8 @@
 </div>
 
 
-## Acknowledgments
+### ⚠️ Notice
 
-- Built using [headtracker](https://github.com/ctxzz/HeadTrackerApp)
+There are some fake “AirPosture” apps that are not mine — they are malicious impersonations attempting to distribute malware built by "Vibe-scammers".
+
+Huge thanks to [Maxdme124](https://www.reddit.com/user/Maxdme124/) for flagging this so quickly. Please stay safe and only download AirPosture from the official links provided here.

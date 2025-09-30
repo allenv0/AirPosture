@@ -5,16 +5,14 @@
 
 <p>
 <p align="center">
-    Turn your AirPods into a posture coach on macOS & iOS. AirPosture uses your AirPods' sensors to catch bad posture in real time.
+    Turn your AirPods into a posture coach on iOS. AirPosture uses your AirPods' sensors to catch bad posture in real time.
     <br />
     
   </p>
   <p align="center">
-  <a href="https://airposture.vercel.app/mac/AirPosture-0.1.dmg">
-    <img width="300" src="App-Assets/download.png">
-  </a>
-    <a href="https://testflight.apple.com/join/ATvtBUZH">
-    <img width="300" src="App-Assets/ios-banner.png">
+
+  <a href="https://testflight.apple.com/join/ATvtBUZH">
+  <img width="300" src="App-Assets/ios-banner.png">
   </a>
 </p>
 

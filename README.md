@@ -5,7 +5,7 @@
 
 <p>
 <p align="center">
-    Turn your AirPods into a posture coach on iOS. AirPosture uses your AirPods' sensors to catch bad posture in real time.
+    An iOS app unlocks the hidden sensors in your AirPods, turning them into a real-time AI posture coach for work and workouts
     <br />
     
   </p>
@@ -16,21 +16,21 @@
   </a>
 </p>
 
-* 🚧 **Status:** alpha stage
-
-* 📌 **Work in progress** — Version 1.0 expected late 2025
-  
-</p>
-
-## Demo
-
-<div align="center">
-    <img src="App-Assets/Air6.gif" alt="demo" width="700" />
-</div>
+## 📱 Demo
 
 <div align="center">
     <img src="App-Assets/30.gif" alt="demo" width="700" />
 </div>
+
+* 🚧 **Status:** alpha stage
+
+* 📌 **Work in progress** — iOS & macOS 1.0 expected late 2025
+
+* 🎧 **Supported Devices** - AirPods Pro (all generations), AirPods (3rd generation and later), AirPods Max, and compatible Beats earphones that support spatial audio with dynamic head tracking. 
+  
+</p>
+
+
 
 
 ### ⚠️ Notice

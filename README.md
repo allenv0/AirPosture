@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="App-Assets/air-grey.png" width="200" height="200" />
+  <img src="App-Assets/air0.3.8.png" width="200" height="200" />
 </p>
 <h1 align="center">AirPosture</h1>
 
@@ -19,7 +19,10 @@
 ## 📱 Demo
 
 <div align="center">
-    <img src="App-Assets/30.gif" alt="demo" width="700" />
+    <img src="App-Assets/airposture-cover-v0.3.png" alt="demo" width="700" />
+</div>
+<div align="center">
+    <img src="App-Assets/features.png" alt="demo" width="700" />
 </div>
 
 * 🚧 **Status:** alpha stage

@@ -4,36 +4,21 @@
 <h1 align="center">AirPosture</h1>
 
 <p>
-<p align="center">
-    An iOS app unlocks the hidden sensors in your AirPods, turning them into a real-time AI posture coach for work and workouts
-    <br />
-    
-  </p>
   <p align="center">
-
   <a href="https://testflight.apple.com/join/ATvtBUZH">
   <img width="300" src="App-Assets/ios-banner.png">
   </a>
-</p>
-
-## 📱 Demo
-
-<div align="center">
+    <div align="center">
     <img src="App-Assets/airposture-cover-v0.3.png" alt="demo" width="700" />
 </div>
-<div align="center">
-    <img src="App-Assets/features.png" alt="demo" width="700" />
-</div>
-
-* 🚧 **Status:** alpha stage
-
-* 📌 **Work in progress** — iOS & macOS 1.0 expected late 2025
-
-* 🎧 **Supported Devices** - AirPods Pro (all generations), AirPods (3rd generation and later), AirPods Max, and compatible Beats earphones that support spatial audio with dynamic head tracking. 
-  
 </p>
 
 
+* **Status:** alpha stage (iOS & macOS 1.0 expected late 2025)
+
+* **Supported Devices** - AirPods Pro (all generations), AirPods (3rd generation and later), AirPods Max, and compatible Beats earphones that support spatial audio with dynamic head tracking. 
+  
+</p>
 
 
 ### ⚠️ Notice

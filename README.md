@@ -1,4 +1,4 @@
-⚠️ Currently public beta’s full. Please [email me](mailto:allenleexyz@gmail.com) or [dm me on X](https://x.com/allenleexyz) and I’ll invite you as soon as a slot opens. Thx 💛
+⚠️ Currently public beta’s full. Please [sign up here](https://wormholecompany.notion.site/2904d8b11caf8083957fe98db81d45f6?pvs=105) and I’ll invite you as soon as a slot opens. Thx 💛
 
 ---
 
@@ -8,7 +8,7 @@
 <h1 align="center">AirPosture</h1>
 <p>
   <p align="center">
-  <a href="https://testflight.apple.com/join/ATvtBUZH">
+  <a href="https://www.airposture.pro/">
   <img width="300" src="App-Assets/ios-banner.png">
   </a>
     <div align="center">
@@ -17,7 +17,7 @@
 </div>
 </p>
 
-**Status:** beta stage (iOS & macOS 1.0 expected late 2025)
+**Status:** beta stage (iOS & macOS 1.0 expected early 2026)
 
 **Supported Devices** - AirPods Pro (all generations), AirPods (3rd generation and later), AirPods Max, and compatible Beats earphones that support spatial audio with dynamic head tracking. 
   

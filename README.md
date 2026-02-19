@@ -20,7 +20,8 @@
 ---
 
 - **Website**: [https://airposture.pro](https://www.airposture.pro/)
-- **Status**: Launching soon in early 2026. Currently public beta’s full. Please [sign up here](https://wormholecompany.notion.site/2904d8b11caf8083957fe98db81d45f6?pvs=105) and I’ll invite you as soon as a slot opens.
+- **Status**: Launching April 2026
+- **Get Invite**:  Currently public beta’s full. Please [sign up here](https://wormholecompany.notion.site/2904d8b11caf8083957fe98db81d45f6?pvs=105) and I’ll invite you as soon as a slot opens.
 - **Supported Devices** - AirPods Pro (all generations), AirPods (3rd generation and later), AirPods Max, and compatible Beats earphones that support spatial audio with dynamic head tracking. 
 - **Follow on [X](https://x.com/allenleexyz)**
 

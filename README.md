@@ -32,7 +32,7 @@
 
 ### 🚨 Notice
 
-There are some fake "AirPosture" apps on App Store and Github that are not mine — they are malicious impersonations attempting to distribute malware built by "Vibe-scammers". 
+There are some fake "AirPosture", "Air Posture", "XXX - AirPosture" apps on App Store and Github that are not mine — they are malicious impersonations attempting to distribute malware built by "Vibe-scammers" like this [one](https://www.reddit.com/user/R3LJA/). 
 
 Huge thanks to [Maxdme124](https://www.reddit.com/user/Maxdme124/) for flagging this so quickly. Please stay safe and only download AirPosture from the official links provided here.
 

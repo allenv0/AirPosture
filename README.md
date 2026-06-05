@@ -19,9 +19,8 @@
 
 ---
 
-- **Website**: [https://airposture.pro](https://www.airposture.pro/)
-- **Status**: Launching April 2026
-- **Get Invite**:  Currently public beta’s full. Please [sign up here](https://wormholecompany.notion.site/2904d8b11caf8083957fe98db81d45f6?pvs=105) and I’ll invite you as soon as a slot opens.
+- **iOS Testflight**: [Download link](https://testflight.apple.com/join/ATvtBUZH)
+- **Status**: Launching on the App Store after  WWDC 2026 (June)
 - **Supported Devices** - AirPods Pro (all generations), AirPods (3rd generation and later), AirPods Max, and compatible Beats earphones that support spatial audio with dynamic head tracking. 
 - **Follow on [X](https://x.com/allenleexyz)**
 
@@ -30,10 +29,10 @@
 
 ---
 
-### 🚨 Notice
+### 🚨 Warning
 
-There are some fake "AirPosture" apps on App Store and Github that are not mine — they are malicious impersonations attempting to distribute malware built by "Vibe-scammers". 
+There are **fake "AirPosture" apps** on the App Store, GitHub and Reddit that are **not mine**. These are **straight-up malicious impersonations pushing malware** from what I can only describe as Vibe-scammers.
 
-Huge thanks to [Maxdme124](https://www.reddit.com/user/Maxdme124/) for flagging this so quickly. Please stay safe and only download AirPosture from the official links provided here.
+Huge thanks to [Maxdme124](https://www.reddit.com/user/Maxdme124/) for catching this so fast. For your own safety, do not download anything called AirPosture unless it comes from the official links I provide here.
 
-The code in this repo isn't up to date because these people were misusing it to spam. As promised, I'll share the full source code once the 1.0 version officially launches on the App Store.
+This repo’s code is intentionally out of date because these people were abusing it to spam and scam. As I’ve said before: the full, current source will be released once version 1.0 is officially live on the App Store — not before. Thank you!

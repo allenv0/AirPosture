@@ -36,11 +36,11 @@ Since the beta launch, AirPosture has been used in over 100,000 sessions by peop
 
 The original plan was to keep developing AirPosture as a commercial product and open source it after version 1.0. But over time, I realized the thing I care about most is not maximizing revenue—it's helping as many people as possible build healthier habits.
 
-## Spammers
+### Spammers
 
 In the past few months, I’ve also seen unofficial “AirPosture” apps with aggressive paywalls, as well as online posts that are not affiliated with me or this project. Some have copied the name and branding while distributing modified versions of the original release or directing users to unknown downloads; some of those are malicious impersonations attempting to distribute malware. I reached out to almost all of them asking that they rename the software or take down the malware, but most either dismissively denied my request or ignored it entirely. This situation has even led Apple to repeatedly reject my own app during review, simply because others used the original open-source version and the “AirPosture” name on the App Store.
 
-## Open it 100%
+### Open it 100%
 
 Rather than fighting those people behind closed doors, I've decided to make the project completely transparent.
 

@@ -1,0 +1,42 @@
+# Xcode build artifacts
+DerivedData/
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xcode user data
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+xcuserdata/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# macOS
+.DS_Store
+
+# Environment / credentials
+.env
+.env.*
+*.p8
+*.p12
+*.mobileprovision
+
+# Firebase / Google Services
+GoogleService-Info.plist
+
+# Live Activity Relay runtime data
+live-activity-relay/data/registrations.json
+live-activity-relay/data/registrations.json.tmp
+
+# Playgrounds
+*.playground/
+
+# IDE
+*.swp
+*.swo
+*~
+.DocumentRevisions-V100

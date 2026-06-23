@@ -53,7 +53,7 @@ Thank you to everyone who tested the beta, shared feedback, reported bugs, and s
 
 ---
 
-> **📖 Setup:** See [TOC.md](TOC.md) for prerequisites, configuration, and build instructions.
+> **⚠️ Setup (WIP):** See [TOC.md](TOC.md) for prerequisites, configuration, and build instructions.
 
 
 ---

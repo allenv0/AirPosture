@@ -1,0 +1,164 @@
+name: AirPosture
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: 18.0
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk.git
+    from: 10.23.0
+targets:
+  AirPosture:
+    type: application
+    platform: iOS
+    sources:
+      - path: AirPostureApp
+        excludes:
+          - Tests/**
+      - AirPostureShared
+    dependencies:
+      - target: AirPostureLiveActivity
+        embed: true
+      - sdk: ARKit.framework
+      - sdk: RealityKit.framework
+      - package: Firebase
+        product: FirebaseAnalytics
+    info:
+      path: AirPostureApp/Info.plist
+      properties:
+        CFBundleDisplayName: AirPosture
+        UILaunchStoryboardName: LaunchScreen
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSMotionUsageDescription: This app needs access to motion data from your AirPods Pro to display head orientation.
+        NSBluetoothAlwaysUsageDescription: This app needs Bluetooth access to discover and connect to your AirPods Pro for motion tracking.
+        NSBluetoothPeripheralUsageDescription: This app needs Bluetooth access to discover and connect to your AirPods Pro for motion tracking.
+        NSUserNotificationsUsageDescription: This app sends notifications to alert you about posture warnings and session updates.
+        NSSupportsLiveActivities: true
+        NSSupportsLiveActivitiesFrequentUpdates: true
+        BGTaskSchedulerPermittedIdentifiers:
+          - com.example.airposture.background-refresh
+        LiveActivityRelayBaseURL: $(LIVE_ACTIVITY_RELAY_BASE_URL)
+        LiveActivityRelayAPIKey: $(LIVE_ACTIVITY_RELAY_API_KEY)
+        UIBackgroundModes:
+          - audio
+    entitlements:
+      path: AirPostureApp/HeadTrackerApp.entitlements
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: AirPostureApp/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.airposture
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        LIVE_ACTIVITY_RELAY_BASE_URL: ""
+        LIVE_ACTIVITY_RELAY_API_KEY: ""
+        MARKETING_VERSION: 0.3
+        CURRENT_PROJECT_VERSION: 28
+        ENABLE_INCREMENTAL_DISTILL_UPLOAD: YES
+      debug:
+        SWIFT_COMPILATION_MODE: incremental
+        SWIFT_OPTIMIZATION_LEVEL: -Onone
+        GCC_OPTIMIZATION_LEVEL: "0"
+        DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+      release:
+        SWIFT_COMPILATION_MODE: wholemodule
+        SWIFT_OPTIMIZATION_LEVEL: -O
+        GCC_OPTIMIZATION_LEVEL: s
+        DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+    attributes:
+      SystemCapabilities:
+        com.apple.BackgroundModes:
+          enabled: true
+        com.apple.BackgroundAppRefresh:
+          enabled: true
+        com.apple.Push:
+          enabled: true
+
+  AirPostureLiveActivity:
+    type: app-extension
+    platform: iOS
+    sources:
+      - AirPostureLiveActivity
+      - AirPostureShared
+    dependencies:
+      - sdk: SwiftUI.framework
+      - sdk: WidgetKit.framework
+      - sdk: UIKit.framework
+    info:
+      path: AirPostureLiveActivity/Info.plist
+      properties:
+        NSSupportsLiveActivities: true
+        NSSupportsLiveActivitiesFrequentUpdates: true
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: AirPostureLiveActivity/AirPostureLiveActivity.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.airposture.LiveActivity
+        INFOPLIST_FILE: AirPostureLiveActivity/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: ""
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: ""
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        SKIP_INSTALL: "YES"
+        MARKETING_VERSION: 0.3
+        CURRENT_PROJECT_VERSION: 28
+
+  AirPostureAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: AirPostureAppTests/LiveActivityTests.swift
+      - path: AirPostureAppTests/LiveActivityColorTests.swift
+      - path: AirPostureAppTests/WidgetSnapshotTests.swift
+      - path: AirPostureAppTests/LiveActivityIntegrationTests.swift
+      - path: AirPostureAppTests/ARSessionLifecycleTests.swift
+      - path: AirPostureAppTests/HeadTrackerAppTests.swift
+      - path: AirPostureAppTests/StartButtonOptimizationTests.swift
+      - path: AirPostureAppTests/DelayedTaskBagTests.swift
+      - path: AirPostureAppTests/PostureColorsTests.swift
+      - path: AirPostureAppTests/UserDefaultsKeysTests.swift
+      - path: AirPostureAppTests/SessionTimingServiceTests.swift
+      - path: AirPostureAppTests/PostureEvaluationServiceTests.swift
+      - path: AirPostureShared/AirPostureActivityAttributes.swift
+      - path: AirPostureLiveActivity/LiveActivityPresentation.swift
+      - path: AirPostureLiveActivity/LiveActivityPalette.swift
+      - path: AirPostureLiveActivity/LiveActivityComponents.swift
+      - path: AirPostureLiveActivity/LiveActivityLockScreen.swift
+      - path: AirPostureLiveActivity/LiveActivityDynamicIsland.swift
+    dependencies:
+      - target: AirPosture
+    info:
+      path: AirPostureAppTests/Info.plist
+    hostApplication: AirPosture
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.airpostureTests
+        INFOPLIST_FILE: AirPostureAppTests/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+
+schemes:
+  AirPosture:
+    build:
+      targets:
+        AirPosture: all
+        AirPostureLiveActivity: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - name: AirPostureAppTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

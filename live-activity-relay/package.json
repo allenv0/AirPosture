@@ -1,0 +1,10 @@
+{
+  "name": "airposture-live-activity-relay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "APNs relay for AirPosture Live Activity push updates",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

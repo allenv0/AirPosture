@@ -18,8 +18,6 @@
 
 ---
 
-- **iOS Testflight**: [Download link](https://testflight.apple.com/join/ATvtBUZH)
-- **Status**: Launching on the App Store after  WWDC 2026 (June)
 - **Supported Devices** - AirPods Pro (all generations), AirPods (3rd generation and later), AirPods Max, and compatible Beats earphones that support spatial audio with dynamic head tracking. 
 - **Follow on [X](https://x.com/allenleexyz)**
 
@@ -37,18 +35,7 @@ This repo's code is intentionally out of date because these people were abusing 
 
 ---
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Prerequisites](#prerequisites)
-- [Quick Start](#quick-start)
-- [Firebase Configuration](#firebase-configuration)
-- [APNs & Live Activity Relay (Optional)](#apns--live-activity-relay-optional)
-- [Build Settings & Environment](#build-settings--environment)
-- [Project Structure](#project-structure)
-- [Running the App](#running-the-app)
-- [AirPostureCore Package](#airposturecore-package)
-- [License](#license)
+> **📖 Table of Contents:** See [TOC.md](TOC.md) for a full index of sections.
 
 ---
 

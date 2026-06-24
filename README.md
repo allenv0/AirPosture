@@ -55,8 +55,9 @@ Thank you to everyone who tested the beta, shared feedback, reported bugs, and s
 
 ---
 
-> **⚠️ Setup (WIP):** See [TOC.md](TOC.md) for prerequisites, configuration, and build instructions.
-> **⚠️ Future (WIP):** Check [Future.md](Future.md).
+- **⚠️ Setup (WIP):** See [TOC.md](TOC.md) for prerequisites, configuration, and build instructions.
+
+- **⚠️ Future (WIP):** Check [Future.md](Future.md).
 
 
 ---

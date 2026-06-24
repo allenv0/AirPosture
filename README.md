@@ -19,6 +19,7 @@
 
 - **Supported Devices** - AirPods Pro (all generations), AirPods (3rd generation and later), AirPods Max, and compatible Beats earphones that support spatial audio with dynamic head tracking. 
 - **iOS Testflight**: [Download link](https://testflight.apple.com/join/ATvtBUZH)
+- **Website**: [https://airposture.github.io](https://airposture.github.io/)
 - **Follow on [X](https://x.com/allenleexyz)**
 
   

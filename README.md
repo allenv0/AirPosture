@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://www.airposture.pro/">
+  <a href="https://airposture.github.io/">
     <img src="App-Assets/air.png" width="200" height="200" />
   </a>
 </p>
 <h1 align="center">
-  <a href="https://www.airposture.pro/" style="color: inherit; text-decoration: none;">AirPosture</a>
+  <a href="https://airposture.github.io/" style="color: inherit; text-decoration: none;">AirPosture</a>
 </h1>
 
 <div align="center">

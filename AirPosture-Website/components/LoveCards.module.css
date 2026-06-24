@@ -1,0 +1,753 @@
+/* LoveCards.module.css */
+
+.loveCardsContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: var(--space-xl) auto;
+  padding: 0 var(--space-lg);
+  position: relative;
+  overflow: visible;
+}
+
+.featuresLabel {
+  font-weight: 700;
+  text-align: center;
+  font-size: 3.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: var(--gradient-silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+.sectionSubtitle {
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: var(--gradient-silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+.cardsGrid {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+  backdrop-filter: var(--blur-heavy);
+  -webkit-backdrop-filter: var(--blur-heavy);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    var(--shadow-lg),
+    0 8px 32px rgba(15, 29, 59, 0.225),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  /* Safari-specific fixes */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.cardsGridInner {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-md);
+  width: max-content;
+  padding: 0 var(--space-md);
+  will-change: transform;
+}
+
+.cardsGrid::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at 30% 70%,
+    rgba(15, 29, 59, 0.18) 0%,
+    transparent 50%
+  );
+  animation: backgroundFloat 15s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes backgroundFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(20px, -20px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg);
+  }
+}
+
+.loveCard {
+  min-width: 320px;
+  max-width: 320px;
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, rgba(13, 13, 19, 0.4) 0%, rgba(37, 38, 64, 0.4) 100%);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #222222;
+  border-radius: var(--radius-md);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  animation: cardEntrance 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  z-index: var(--z-base);
+  /* Safari-specific fixes */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.95);
+    -webkit-transform: translateX(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    -webkit-transform: translateX(0) scale(1);
+  }
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow:
+    var(--shadow-sm),
+    0 2px 8px rgba(61, 139, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--glass-border);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.userDetails {
+  flex: 1;
+  min-width: 0;
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 0.95em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-bottom: var(--space-xs);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+}
+
+.verifiedBadge {
+  width: 12px;
+  height: 12px;
+  color: #3d8bff;
+  flex-shrink: 0;
+}
+
+.userLocation {
+  font-size: 0.78em;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.01em;
+}
+
+.weeksUsing {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
+.starsContainer {
+  display: flex;
+  gap: 0.2em;
+  justify-content: center;
+}
+
+.starContainer {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.star {
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.starFilled {
+  color: #ffd700;
+  filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.6));
+  animation: starPulse 4s ease-in-out infinite;
+  position: relative;
+}
+
+.starFilled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: starSparkle 3s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+}
+
+@keyframes starSparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.star svg {
+  width: 100%;
+  height: 100%;
+}
+
+.comment {
+  font-size: 0.92em;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  margin: var(--space-lg) 0;
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  padding: 0 var(--space-xs);
+  letter-spacing: 0.01em;
+}
+
+.quoteMark {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.8em;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 0;
+  position: relative;
+  top: 0.3em;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--glass-border);
+}
+
+.heartIcon {
+  width: 18px;
+  height: 18px;
+  color: #ff6b6b;
+  animation: heartBeat 2s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  10%,
+  30% {
+    transform: scale(1.15);
+  }
+  20% {
+    transform: scale(1);
+  }
+}
+
+.heartIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.loveText {
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--glass-border-emphasis);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.indicator:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.3);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.activeIndicator {
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  border-color: transparent;
+  width: 28px;
+  border-radius: 6px;
+  animation: indicatorPulse 2s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes indicatorPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.floatingElements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.referenceLinks {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.referenceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--glass-background-light);
+  border: 1px solid var(--glass-border-emphasis);
+  border-radius: var(--radius-sm);
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.85em;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  backdrop-filter: var(--blur-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.referenceLink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left var(--duration-fast);
+}
+
+.referenceLink:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.referenceLink:hover::before {
+  left: 100%;
+}
+
+.referenceLink svg {
+  width: 16px;
+  height: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.floatingHeart {
+  position: absolute;
+  font-size: 1.4em;
+  opacity: 0.7;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  filter: blur(0.5px);
+}
+
+.heart1 {
+  top: 10%;
+  left: 10%;
+  animation-name: floatPath1;
+}
+
+.heart2 {
+  top: 20%;
+  right: 15%;
+  animation-name: floatPath2;
+  animation-delay: 1s;
+}
+
+.heart3 {
+  bottom: 20%;
+  left: 15%;
+  animation-name: floatPath3;
+  animation-delay: 2s;
+}
+
+.heart4 {
+  bottom: 15%;
+  right: 10%;
+  animation-name: floatPath4;
+  animation-delay: 3s;
+}
+
+@keyframes floatPath1 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(20px, -15px) rotate(15deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-10px, -25px) rotate(-10deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translate(15px, -10px) rotate(5deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes floatPath2 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.4;
+  }
+  33% {
+    transform: translate(-25px, -20px) rotate(-20deg);
+    opacity: 0.7;
+  }
+  66% {
+    transform: translate(10px, -15px) rotate(10deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes floatPath3 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(15px, -20px) rotate(20deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-20px, -10px) rotate(-15deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translate(10px, -15px) rotate(8deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes floatPath4 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-20px, -25px) rotate(-25deg);
+    opacity: 0.8;
+  }
+}
+
+/* Enhanced hover effects */
+.loveCard:hover {
+  transform: var(--transform-card-hover);
+  -webkit-transform: var(--transform-card-hover);
+  box-shadow:
+    var(--shadow-lg),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.3);
+  border-color: var(--glass-border-emphasis);
+  z-index: var(--z-raised);
+}
+
+.loveCard:hover .avatar img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.loveCard:hover .quoteMark {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Section subtitle */
+.sectionSubtitle {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin: var(--space-xl) 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .cardsGrid {
+    gap: 1em;
+    padding: 1.5em;
+  }
+
+  .loveCard {
+    min-width: 280px;
+    max-width: 280px;
+    padding: 1.2em;
+  }
+
+  .avatar {
+    width: 42px;
+    height: 42px;
+  }
+
+  .userName {
+    font-size: 0.9em;
+  }
+
+  .userLocation {
+    font-size: 0.75em;
+  }
+
+  .comment {
+    font-size: 0.88em;
+  }
+}
+
+@media (max-width: 640px) {
+  .loveCardsContainer {
+    margin: 1.5em auto;
+    padding: 0 1em;
+  }
+
+  .featuresLabel {
+    font-size: 2.5em;
+  }
+
+  .cardsGrid {
+    gap: var(--space-md);
+    padding: var(--space-md);
+  }
+
+  .loveCard {
+    min-width: 260px;
+    max-width: 260px;
+    padding: var(--space-lg);
+  }
+
+  .userInfo {
+    gap: var(--space-xs);
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .userName {
+    font-size: 0.92em;
+  }
+
+  .userLocation {
+    font-size: 0.73em;
+  }
+
+  .starContainer {
+    width: 16px;
+    height: 16px;
+  }
+
+  .comment {
+    font-size: 0.9em;
+  }
+
+  .quoteMark {
+    font-size: 1.6em;
+  }
+
+  .indicators {
+    gap: 0.8em;
+    margin-top: 2em;
+  }
+
+  .floatingHeart {
+    display: none;
+  }
+
+  .loveCard:hover {
+    transform: scale(1.01) translateY(-2px);
+    -webkit-transform: scale(1.01) translateY(-2px);
+  }
+}
+
+/* Safari-specific fallbacks */
+@supports not (backdrop-filter: blur(40px)) {
+  .cardsGrid {
+    background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .loveCard {
+    background: linear-gradient(135deg, rgba(13, 13, 19, 0.4) 0%, rgba(37, 38, 64, 0.4) 100%);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* Safari-specific performance optimizations */
+@supports (-webkit-backdrop-filter: blur(40px)) {
+  .loveCard {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .cardsGrid {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .loveCardsContainer {
+    margin: 1em auto;
+    padding: 0 0.5em;
+  }
+
+  .featuresLabel {
+    font-size: 2em;
+  }
+
+  .cardsGrid {
+    padding: var(--space-sm);
+  }
+
+  .loveCard {
+    padding: 1em;
+  }
+}

@@ -1,0 +1,604 @@
+.deck {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  color: var(--color-text);
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  background: var(--gradient-mesh);
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.homeLink {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: var(--z-maximum);
+}
+
+.homeLink:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  display: block;
+}
+
+.viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 96px 132px 48px;
+  opacity: 0;
+  pointer-events: none;
+  overflow: auto;
+  transition: opacity var(--duration-fast) ease-out, transform var(--duration-fast) ease-out;
+  transform: scale(0.98);
+}
+
+.slideActive {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.slideInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.slideInnerAnimate .title {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeSlideUp 0.5s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.slideInnerAnimate .bullet {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.slideInnerAnimate .bullet:nth-child(1) { animation: fadeSlideUp 0.4s ease-out forwards 0.2s; }
+.slideInnerAnimate .bullet:nth-child(2) { animation: fadeSlideUp 0.4s ease-out forwards 0.28s; }
+.slideInnerAnimate .bullet:nth-child(3) { animation: fadeSlideUp 0.4s ease-out forwards 0.36s; }
+.slideInnerAnimate .bullet:nth-child(4) { animation: fadeSlideUp 0.4s ease-out forwards 0.44s; }
+.slideInnerAnimate .bullet:nth-child(5) { animation: fadeSlideUp 0.4s ease-out forwards 0.52s; }
+
+.slideInnerAnimate .mediaColumn {
+  opacity: 0;
+  transform: translateX(24px);
+  animation: fadeSlideRight 0.5s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.slideInnerAnimate .media {
+  opacity: 0;
+  transform: scale(0.96);
+  animation: fadeScaleIn 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.copy {
+  flex: 1;
+  width: 100%;
+  max-width: 50%;
+}
+
+.copyFull {
+  max-width: 100%;
+}
+
+.title {
+  margin: 0 0 32px;
+  font-size: clamp(2rem, 4.8vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  word-break: break-word;
+  color: #fff;
+  text-shadow: 0 0 60px rgba(255, 255, 255, 0.2);
+}
+
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bullet {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 24px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  word-break: break-word;
+}
+
+.bullet:nth-child(1) { }
+.bullet:nth-child(2) { }
+.bullet:nth-child(3) { }
+.bullet:nth-child(4) { }
+.bullet:nth-child(5) { }
+
+.bulletLead {
+  color: #fff;
+  font-weight: 600;
+}
+
+.bulletDot {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+
+.memoButtonWrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+
+.memoButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8em 2em;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 52%, #22c55e 100%);
+  box-shadow: var(--shadow-xl);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.memoButton:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.75);
+}
+
+.memoButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.mediaColumn {
+  flex: 1;
+  width: 100%;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mediaCard {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.media {
+  display: block;
+  width: 100%;
+  height: clamp(280px, 44vh, 520px);
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.media:hover {
+  filter: brightness(0.7);
+}
+
+.mediaCard:hover .media::after {
+  opacity: 1;
+}
+
+.media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.mediaStacked {
+  height: clamp(200px, 28vh, 300px);
+}
+
+.mediaPlaceholder {
+  width: 100%;
+  height: clamp(280px, 44vh, 520px);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border-light);
+  background: radial-gradient(circle at 30% 30%, rgba(61, 139, 255, 0.22), rgba(0, 0, 0, 0.28));
+}
+
+.mediaPlaceholderStacked {
+  height: clamp(200px, 28vh, 300px);
+}
+
+.dotNav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: var(--z-overlay);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dotButton {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.dotButton:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.dotButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.dotButton:hover .dotTooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+  visibility: visible;
+}
+
+.dotTooltip {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-8px);
+  margin-right: 12px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%) translateX(-4px);
+  transition: var(--transition-smooth);
+  pointer-events: none;
+}
+
+.dotIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.4);
+  transition: var(--transition-smooth);
+}
+
+.dotIndicatorActive {
+  width: 24px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.controls {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: var(--z-overlay);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: var(--blur-subtle);
+  -webkit-backdrop-filter: var(--blur-subtle);
+}
+
+.navButton {
+  min-width: 104px;
+  min-height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-full);
+  padding: 0 16px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.navButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.navButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.navButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.progress {
+  min-width: 64px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.tapHint {
+  position: fixed;
+  left: 50%;
+  bottom: 84px;
+  transform: translateX(-50%);
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.875rem;
+  animation: fadeInOut 4s ease-in-out;
+  backdrop-filter: var(--blur-subtle);
+  -webkit-backdrop-filter: var(--blur-subtle);
+}
+
+.tapIcon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.9;
+  animation: tapNudge 1.3s ease-in-out infinite;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeScaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  85% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+@keyframes tapNudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+@media (max-width: 768px) {
+  .homeLink {
+    top: 16px;
+    left: 16px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .slide {
+    padding: 82px 16px 148px;
+  }
+
+  .slideInner {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .copy {
+    max-width: 100%;
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .bullet {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+
+  .bulletDot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .memoButtonWrap {
+    margin-top: 24px;
+  }
+
+  .memoButton {
+    width: 100%;
+    min-height: 44px;
+    font-size: 0.95rem;
+  }
+
+  .mediaColumn {
+    max-width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .mediaCard {
+    flex: 0 0 78%;
+    max-width: 78%;
+  }
+
+  .media {
+    height: 220px;
+  }
+
+  .mediaStacked {
+    height: 180px;
+  }
+
+  .mediaPlaceholder {
+    height: 220px;
+  }
+
+  .mediaPlaceholderStacked {
+    height: 180px;
+  }
+
+  .dotNav {
+    right: 50%;
+    top: auto;
+    bottom: 86px;
+    transform: translateX(50%);
+    flex-direction: row;
+    gap: 2px;
+  }
+
+  .controls {
+    bottom: 14px;
+    width: calc(100% - 24px);
+    max-width: 420px;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .navButton {
+    min-width: 88px;
+    font-size: 0.9rem;
+  }
+
+  .progress {
+    min-width: 48px;
+    font-size: 0.875rem;
+  }
+
+  .tapHint {
+    bottom: 136px;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide,
+  .dotButton,
+  .dotIndicator,
+  .memoButton,
+  .navButton,
+  .tapIcon {
+    transition: none;
+    animation: none;
+  }
+}

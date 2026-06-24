@@ -1,0 +1,602 @@
+.container {
+  height: 100%;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html:has(.container),
+body:has(.container),
+div:has(> .container) {
+  height: 100%;
+}
+
+/* SPLASH */
+
+.splash {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  align-items: center;
+  padding: var(--space-xl);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.splash::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(74, 107, 196, 0.15) 0%,
+    transparent 70%
+  );
+  animation: floatAnimation 20s ease-in-out infinite;
+  z-index: -1;
+}
+
+.splash::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(30, 63, 125, 0.15) 0%,
+    transparent 70%
+  );
+  animation: floatAnimation 20s ease-in-out infinite reverse;
+  z-index: -1;
+}
+
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(10%, 10%) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(-10%, 20%) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(-20%, -10%) rotate(270deg);
+  }
+}
+
+.phonePic {
+  flex-grow: 1;
+  background-image: url("/demo-landing.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: stretch;
+  margin: -0.5em;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+  animation: gentleFloat 6s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+  transform: scale(0.7);
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: scale(0.7) translateY(0);
+  }
+
+  50% {
+    transform: scale(0.7) translateY(-20px);
+  }
+}
+
+/* Mobile-specific animation with different scale */
+@media screen and (max-width: 799px) {
+  @keyframes gentleFloat {
+    0%,
+    100% {
+      transform: scale(0.95) translateY(0);
+    }
+
+    50% {
+      transform: scale(0.95) translateY(-15px);
+      /* Reduced vertical movement on mobile */
+    }
+  }
+
+  .downloadIcon {
+    transform: scale(0.95);
+    opacity: 0.95;
+    transition:
+      transform 0.3s ease-out,
+      opacity 0.3s ease-out,
+      box-shadow 0.3s ease-out;
+    backdrop-filter: none;
+    background: linear-gradient(
+      135deg,
+      rgba(92, 45, 164, 1) 0%,
+      rgba(124, 58, 237, 100%)
+    );
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    animation: smoothAppear 0.5s ease-out 0.1s forwards;
+    will-change: transform, opacity;
+  }
+
+  .downloadIcon::before,
+  .downloadIcon::after {
+    display: none;
+  }
+
+  @keyframes smoothAppear {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+/* Small phones animation */
+@media screen and (max-width: 480px) {
+  @keyframes gentleFloat {
+    0%,
+    100% {
+      transform: scale(1) translateY(0);
+    }
+
+    50% {
+      transform: scale(1) translateY(-10px);
+      /* Even less movement on very small screens */
+    }
+  }
+
+  .downloadIcon {
+    transform: scale(0.92);
+    transition:
+      transform 0.25s ease-out,
+      opacity 0.25s ease-out;
+    animation: smoothAppearSmall 0.4s ease-out 0.05s forwards;
+  }
+
+  @keyframes smoothAppearSmall {
+    0% {
+      transform: scale(0.85);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.splashCTA {
+  text-align: center;
+  background: var(--glass-background-heavy);
+  backdrop-filter: var(--blur-heavy);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  padding: var(--space-2xl);
+  box-shadow: var(--glass-shadow);
+  color: var(--color-text);
+  position: relative;
+  z-index: 3;
+  animation: slideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.splashCTA h1 {
+  font-size: 3em;
+  font-weight: 800;
+  margin-bottom: var(--space-xs);
+  margin-top: 0;
+  line-height: 1.1;
+  color: var(--color-text);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+  letter-spacing: -0.02em;
+}
+
+.splashCTA p {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 799px) {
+  .splash {
+    padding: var(--space-2xl) var(--space-xl);
+    min-height: 100vh;
+    /* Ensure full height on mobile */
+  }
+
+  .phonePic {
+    flex: 1;
+    /* Allow more flexible sizing */
+    max-height: 35vh;
+    /* Limit to 35% of viewport height */
+    width: 80%;
+    /* Take up 80% of width for better proportions */
+    margin: 5px auto;
+    /* Center with horizontal auto margin */
+    transform: scale(0.95);
+    /* 10% larger than before for better mobile visibility */
+  }
+
+  .splashCTA {
+    padding: var(--space-lg) var(--space-md);
+    flex: 1;
+    /* Allow equal flex growth */
+  }
+}
+
+/* Small phones specific adjustments */
+@media screen and (max-width: 480px) {
+  .phonePic {
+    max-height: 30vh;
+    /* Further reduce height on very small screens */
+    width: 85%;
+    /* Slightly wider on very small phones */
+    transform: scale(1);
+    /* Full size on very small phones for better visibility */
+  }
+
+  .splashCTA {
+    padding: var(--space-md) var(--space-sm);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .splash {
+    flex-direction: row-reverse;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .splashCTA {
+    width: 50%;
+    padding-left: var(--space-xl);
+    box-sizing: border-box;
+    font-size: 1.3em;
+  }
+
+  .splashCTA h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .splashCTA h1 {
+    font-size: 3em;
+  }
+
+  .phonePic {
+    margin: -3em;
+  }
+}
+
+.downloadIcon {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  align-self: center;
+  background: linear-gradient(
+    135deg,
+    rgba(92, 45, 164, 1) 0%,
+    /* Deep purple */ rgba(124, 58, 237, 1) 14.3%,
+    /* Purple */ rgba(139, 92, 246, 1) 28.6%,
+    /* Light purple */ rgba(59, 130, 246, 1) 42.9%,
+    /* Blue */ rgba(34, 197, 94, 1) 57.1%,
+    /* Green */ rgba(251, 146, 60, 1) 71.4%,
+    /* Orange */ rgba(14, 165, 233, 1) 85.7%,
+    /* Sky blue */ rgba(56, 189, 248, 1) 100% /* Light sky blue */
+  );
+  background-size: 200% 200%;
+  backdrop-filter: blur(30px) saturate(1.8);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+  box-shadow:
+    0 8px 32px rgba(139, 92, 246, 0.6),
+    0 4px 16px rgba(219, 39, 119, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.25),
+    inset 0 2px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 0.5em;
+  color: white;
+  transition:
+    transform 0.3s ease-out,
+    box-shadow 0.3s ease-out;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 0.8em 2em;
+  letter-spacing: 0.03em;
+  animation: colorWave 20s ease-in-out infinite;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  will-change: transform;
+}
+
+.downloadIcon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.2) 80%,
+    transparent
+  );
+  transition: left 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.downloadIcon::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 55px;
+  background: linear-gradient(
+    45deg,
+    rgba(92, 45, 164, 0.9) 0%,
+    /* Deep purple */ rgba(124, 58, 237, 0.9) 14.3%,
+    /* Purple */ rgba(139, 92, 246, 0.8) 28.6%,
+    /* Light purple */ rgba(59, 130, 246, 0.9) 42.9%,
+    /* Blue */ rgba(34, 197, 94, 0.9) 57.1%,
+    /* Green */ rgba(251, 146, 60, 0.8) 71.4%,
+    /* Orange */ rgba(14, 165, 233, 0.8) 85.7%,
+    /* Sky blue */ rgba(56, 189, 248, 0.9) 100% /* Light sky blue */
+  );
+  background-size: 300% 300%;
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 1;
+  animation:
+    glowPulse 1s ease-in-out infinite,
+    colorRotate 6s linear infinite;
+}
+
+.downloadIcon:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow:
+    0 20px 60px rgba(139, 92, 246, 0.9),
+    0 15px 40px rgba(34, 197, 94, 0.7),
+    0 0 0 3px rgba(255, 255, 255, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.6),
+    0 0 80px rgba(251, 146, 60, 0.6),
+    0 0 120px rgba(59, 130, 246, 0.4);
+
+  backdrop-filter: blur(40px) saturate(2.2);
+  border-color: rgba(255, 255, 255, 0.6);
+  animation: colorWave 10s ease-in-out infinite;
+}
+
+.downloadIcon:hover::before {
+  left: 100%;
+}
+
+.downloadIcon:active {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow:
+    0 10px 30px rgba(139, 92, 246, 0.8),
+    0 5px 15px rgba(219, 39, 119, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(25px) saturate(1.8);
+}
+
+/* .downloadIcon img {
+  height: 1em;
+  width: 1em;
+  margin-left: 0.5em;
+} */
+
+/* LONGFORM */
+
+.blackPage {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.featuresLabel {
+  font-weight: 700;
+  text-align: center;
+  font-size: 3.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  color: var(--color-text);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+  letter-spacing: -0.02em;
+}
+
+.blackPage,
+.whitePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em;
+  position: relative;
+  z-index: 10;
+  background: transparent;
+}
+
+.whitePage {
+  background: var(--glass-background);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin: 2em;
+  border-radius: 30px;
+  border: 1px solid var(--glass-border);
+}
+
+.longform {
+  max-width: 800px;
+  font-size: 1.3em;
+  /* font-family: 'Playfair Display', serif; */
+}
+
+@media screen and (min-width: 600px) {
+  .blackPage,
+  .whitePage {
+    padding: 3em;
+  }
+
+  .longform {
+    font-size: 1.5em;
+  }
+}
+
+.longform p {
+  line-height: 2;
+}
+
+.longform h1 {
+  font-size: 1em;
+  color: var(--color-text);
+  /* font-weight: normal; */
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 1rem;
+  /* border-top: 1px solid #eaeaea; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer a:not(.downloadIcon) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.buzz-on-hover {
+  transform: perspective(1px) translateZ(0);
+  transition: transform 0.1s;
+}
+
+.buzz-on-hover:hover {
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-name: buzz;
+}
+
+@keyframes buzz {
+  0% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+
+@keyframes crystalPulse {
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes colorWave {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes colorRotate {
+  0% {
+    background-position: 0% 0%;
+    filter: blur(15px) hue-rotate(0deg);
+  }
+  100% {
+    background-position: 300% 300%;
+    filter: blur(20px) hue-rotate(360deg);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+    filter: blur(15px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: blur(20px);
+  }
+}

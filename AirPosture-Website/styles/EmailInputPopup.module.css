@@ -1,0 +1,447 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: var(--z-maximum);
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.popup {
+  background: var(--glass-background-heavy);
+  backdrop-filter: var(--blur-heavy);
+  -webkit-backdrop-filter: var(--blur-heavy);
+  border: 2px solid var(--glass-border-emphasis);
+  border-radius: var(--radius-lg);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 2px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  max-width: 420px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.9) translateY(20px);
+  animation: popupAppear 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  background: none;
+  border: none;
+  color: var(--color-text-lighter);
+  font-size: 2em;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition-smooth);
+  z-index: 10;
+  line-height: 1;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  transform: scale(1.1);
+}
+
+.closeButton:active {
+  transform: scale(0.95);
+}
+
+.content {
+  padding: 3em 2.5em 2.5em;
+  text-align: center;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: 800;
+  margin-bottom: 0.75em;
+  color: var(--color-text);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+  background: var(--gradient-silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: var(--color-text-lighter);
+  margin-bottom: 2em;
+  font-weight: 500;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.emailInput {
+  width: 100%;
+  padding: 1.2em 1.5em;
+  background: var(--glass-background-light);
+  backdrop-filter: var(--blur-standard);
+  -webkit-backdrop-filter: var(--blur-standard);
+  border: 2px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: 1em;
+  font-family: inherit;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  outline: none;
+}
+
+.emailInput::placeholder {
+  color: var(--color-text-lighter);
+  opacity: 0.7;
+}
+
+.emailInput:focus {
+  border-color: var(--color-primary);
+  box-shadow: 
+    0 0 0 4px rgba(61, 139, 255, 0.1),
+    0 0 20px rgba(61, 139, 255, 0.2);
+  background: var(--glass-background);
+}
+
+.emailInput.error {
+  border-color: #ff4757;
+  background: rgba(255, 71, 87, 0.05);
+}
+
+.emailInput.error:focus {
+  box-shadow: 
+    0 0 0 4px rgba(255, 71, 87, 0.1),
+    0 0 20px rgba(255, 71, 87, 0.2);
+}
+
+.emailInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -1.5em;
+  left: 0;
+  font-size: 0.85em;
+  color: #ff4757;
+  font-weight: 500;
+}
+
+.submitButton {
+  background: linear-gradient(
+    135deg,
+    rgba(92, 45, 164, 1) 0%,
+    rgba(124, 58, 237, 1) 14.3%,
+    rgba(139, 92, 246, 1) 28.6%,
+    rgba(59, 130, 246, 1) 42.9%,
+    rgba(34, 197, 94, 1) 57.1%,
+    rgba(251, 146, 60, 1) 71.4%,
+    rgba(14, 165, 233, 1) 85.7%,
+    rgba(56, 189, 248, 1) 100%
+  );
+  background-size: 200% 200%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-full);
+  padding: 1em 2.5em;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(30px) saturate(1.8);
+  box-shadow:
+    0 8px 32px rgba(139, 92, 246, 0.6),
+    0 4px 16px rgba(219, 39, 119, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.25),
+    inset 0 2px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  animation: colorWave 20s ease-in-out infinite;
+}
+
+.submitButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.2) 80%,
+    transparent
+  );
+  transition: left 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submitButton::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 55px;
+  background: linear-gradient(
+    45deg,
+    rgba(92, 45, 164, 0.9) 0%,
+    rgba(124, 58, 237, 0.9) 14.3%,
+    rgba(139, 92, 246, 0.8) 28.6%,
+    rgba(59, 130, 246, 0.9) 42.9%,
+    rgba(34, 197, 94, 0.9) 57.1%,
+    rgba(251, 146, 60, 0.8) 71.4%,
+    rgba(14, 165, 233, 0.8) 85.7%,
+    rgba(56, 189, 248, 0.9) 100%
+  );
+  background-size: 300% 300%;
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 1;
+  animation:
+    glowPulse 1s ease-in-out infinite,
+    colorRotate 6s linear infinite;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow:
+    0 20px 60px rgba(139, 92, 246, 0.9),
+    0 15px 40px rgba(34, 197, 94, 0.7),
+    0 0 0 3px rgba(255, 255, 255, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.6),
+    0 0 80px rgba(251, 146, 60, 0.6),
+    0 0 120px rgba(59, 130, 246, 0.4);
+  backdrop-filter: blur(40px) saturate(2.2);
+  border-color: rgba(255, 255, 255, 0.6);
+  animation: colorWave 10s ease-in-out infinite;
+}
+
+.submitButton:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow:
+    0 10px 30px rgba(139, 92, 246, 0.8),
+    0 5px 15px rgba(219, 39, 119, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(25px) saturate(1.8);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.successMessage {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.successIcon {
+  font-size: 3em;
+  margin-bottom: 1em;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5em;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 10px 30px rgba(58, 123, 213, 0.5);
+  animation: successPulse 0.6s ease-out;
+}
+
+.successMessage h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5em;
+  background: var(--gradient-silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.successMessage p {
+  color: var(--color-text-lighter);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popupAppear {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes colorWave {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes colorRotate {
+  0% {
+    background-position: 0% 0%;
+    filter: blur(15px) hue-rotate(0deg);
+  }
+  100% {
+    background-position: 300% 300%;
+    filter: blur(20px) hue-rotate(360deg);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+    filter: blur(15px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: blur(20px);
+  }
+}
+
+/* Mobile responsive design */
+@media screen and (max-width: 799px) {
+  .popup {
+    width: 95%;
+    margin: 1em;
+  }
+  
+  .content {
+    padding: 2em 1.5em 1.5em;
+  }
+  
+  .title {
+    font-size: 1.6em;
+  }
+  
+  .description {
+    font-size: 1em;
+    margin-bottom: 1.5em;
+  }
+  
+  .emailInput {
+    padding: 1em 1.2em;
+  }
+  
+  .submitButton {
+    padding: 0.9em 2em;
+    font-size: 1em;
+  }
+  
+  .closeButton {
+    top: 1em;
+    right: 1em;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup {
+    width: 98%;
+    margin: 0.5em;
+  }
+  
+  .content {
+    padding: 1.5em 1em 1em;
+  }
+  
+  .title {
+    font-size: 1.4em;
+  }
+  
+  .description {
+    font-size: 0.9em;
+  }
+  
+  .emailInput {
+    padding: 0.9em 1em;
+    font-size: 0.9em;
+  }
+  
+  .submitButton {
+    padding: 0.8em 1.5em;
+    font-size: 0.95em;
+  }
+}

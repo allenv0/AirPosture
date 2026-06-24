@@ -1,0 +1,238 @@
+.featureGrid {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    position: relative;
+}
+
+@media screen and (min-width: 700px) {
+    .featureGrid {
+        display: block;
+        column-count: 2;
+        column-gap: 1em;
+        width: 41em;    
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    .featureGrid {
+        column-count: 3;
+        width: 62em;    
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .featureGrid {
+        font-size: 20px;
+    }
+}
+
+.featureGrid img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    width: 20em;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    border-radius: var(--radius-md);
+    background: var(--glass-background-heavy);
+    backdrop-filter: var(--blur-standard);
+    -webkit-backdrop-filter: var(--blur-standard);
+    border: 1px solid var(--glass-border-emphasis);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    overflow: hidden;
+    line-height: 1.35;
+    position: relative;
+    transition: var(--transition-smooth);
+    transform: translateZ(0);
+    /* Safari-specific fixes */
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Safari fallback for backdrop-filter */
+@supports not (backdrop-filter: blur(20px)) {
+    .card {
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 30%, rgba(255, 255, 255, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.card:hover {
+    transform: var(--transform-card-hover);
+    -webkit-transform: var(--transform-card-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: var(--space-md);
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: var(--z-base);
+}
+
+.card p {
+    margin-top: -0.8em;
+    margin-bottom: 0.6em;
+    font-weight: 500;
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+.card img {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card:hover img {
+    transform: var(--transform-image-hover);
+    -webkit-transform: var(--transform-image-hover);
+}
+
+.red {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(255, 154, 0, 0.15) 100%);
+    color: #B02F07;
+}
+
+.red p {
+    color: #AD8E87;
+}
+
+.purple {
+    background: linear-gradient(135deg, rgba(160, 68, 255, 0.15) 0%, rgba(239, 90, 200, 0.15) 100%);
+    color: #71439D;
+}
+
+.purple p {
+    opacity: 0.85;
+}
+
+.twitterBlue {
+    background: linear-gradient(135deg, rgba(29, 161, 242, 0.15) 0%, rgba(91, 192, 255, 0.15) 100%);
+    color: #4A99E9;
+}
+
+.blue {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+    color: #373E69;
+}
+
+.green {
+    background: linear-gradient(135deg, rgba(11, 222, 111, 0.15) 0%, rgba(48, 207, 208, 0.15) 100%);
+    color: #205529;
+}
+
+.healthRed {
+    background: linear-gradient(135deg, rgba(255, 63, 112, 0.15) 0%, rgba(255, 136, 96, 0.15) 100%);
+    color: #B02F07;
+}
+
+.dark {
+    background: linear-gradient(135deg, rgba(13, 13, 19, 0.4) 0%, rgba(37, 38, 64, 0.4) 100%);
+    color: #EEE9F8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark.red {
+    color: #EFBDBE;
+    background: linear-gradient(135deg, rgba(239, 189, 190, 0.15) 0%, rgba(255, 154, 158, 0.15) 100%);
+}
+
+.dark.blueGradient {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(5, 13, 29, 0.75) 50%,
+        rgba(0, 0, 0, 0.4) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 4px 16px rgba(15, 29, 59, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.dark.blueGradient::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+        45deg,
+        transparent 25%,
+        rgba(0, 153, 255, 0.15) 50%,
+        transparent 75%
+    );
+    border-radius: 24px;
+    animation: slowRotate 25s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.dark.blueGradient:hover {
+    transform: translateY(-8px) translateZ(30px) scale(1.02);
+    -webkit-transform: translateY(-8px) translateZ(30px) scale(1.02);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 8px 24px rgba(0, 153, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        0 0 0 1px rgba(0, 153, 255, 0.3);
+    border-color: rgba(0, 153, 255, 0.4);
+}
+
+@keyframes slowRotate {
+    0% {
+        transform: rotate(0deg) scale(1.3);
+        opacity: 0.4;
+    }
+    25% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    75% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: rotate(360deg) scale(1.3);
+        opacity: 0.4;
+    }
+}

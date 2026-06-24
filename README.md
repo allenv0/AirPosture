@@ -22,6 +22,7 @@
 - **Website**: [https://airposture.github.io](https://airposture.github.io/)
 - **Follow on [X](https://x.com/allenleexyz)**
 
+
   
 
 ---
@@ -55,6 +56,7 @@ Thank you to everyone who tested the beta, shared feedback, reported bugs, and s
 ---
 
 > **⚠️ Setup (WIP):** See [TOC.md](TOC.md) for prerequisites, configuration, and build instructions.
+> **⚠️ Future (WIP):** Check [Future.md](Future.md).
 
 
 ---

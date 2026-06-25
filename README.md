@@ -10,21 +10,17 @@
 <div align="center">
     <img src="App-Assets/air-ban.png" alt="AirPosture banner" width="700" />
 </div>
-<div align="center">
-    <img src="App-Assets/air.gif" alt="AirPosture demo animation" width="700" />
-</div>
-
 ---
 
-
+- **Intro**: An iOS app turns your AirPods into a real-time posture coach — giving you gentle nudges to sit better, move more, and reduce neck strain throughout the day.
 - **Supported Devices** - AirPods Pro (all generations), AirPods (3rd generation and later), AirPods Max, and compatible Beats earphones that support spatial audio with dynamic head tracking. 
 - **iOS Testflight**: [Download link](https://testflight.apple.com/join/ATvtBUZH)
 - **Website**: [https://airposture.github.io](https://airposture.github.io/)
 - **Follow on [X](https://x.com/allenleexyz)**
+- **Email**: allenleexyz@gmail.com
 
 
   
-
 ---
 
 ## AirPosture is Now Fully Open Source
@@ -34,6 +30,11 @@ When I started building AirPosture, I wasn't trying to create another subscripti
 I simply wanted a tool that could help people improve their posture using the devices they already wear every day.
 
 Since the beta launch, AirPosture has been used in over 100,000 sessions by people around the world. Seeing that response forced me to rethink why I was building this project in the first place.
+
+<div align="center">
+    <img src="App-Assets/air.gif" alt="AirPosture demo animation" width="700" />
+</div>
+
 
 The original plan was to keep developing AirPosture as a commercial product and open source it after version 1.0. But over time, I realized the thing I care about most is not maximizing revenue—it's helping as many people as possible build healthier habits.
 
@@ -47,18 +48,39 @@ Rather than fighting those people behind closed doors, I've decided to make the 
 
 So today, I'm open sourcing the entire AirPosture codebase.
 
-If AirPosture helps even a small number of people sit better, move better, and feel better, then it has already succeeded.
-
-Thank you to everyone who tested the beta, shared feedback, reported bugs, and supported the project from the beginning.
+If AirPosture helps even a small number of people sit better, move better, and feel better, then it has already succeeded. Thank you to everyone who tested the beta, shared feedback, reported bugs, and supported the project from the beginning.
 
 — Allen Lee
 
 ---
 
+## Where AirPosture Is Going
+
+### macOS
+
+<div align="center">
+    <img src="App-Assets/notch.png" alt="AirPosture demo animation" width="700" />
+</div>
+
+<div align="center">
+    <img src="App-Assets/mac-ui.png" alt="AirPosture demo animation" width="700" />
+</div>
+
+### Auto-Activity Switching
+
+<div align="center">
+    <img src="App-Assets/auto.png" alt="AirPosture demo animation" width="700" />
+</div>
+
+AirPods now include richer motion and medical-grade heart rate sensors, and Apple’s MLX framework enables private, low-latency AI models on iOS without cloud delays or privacy compromises.
+
+
+---
+
+## Docs
+
 - **⚠️ Setup (WIP):** See [TOC.md](TOC.md) for prerequisites, configuration, and build instructions.
-
-- **⚠️ Future (WIP):** Check [Future.md](Future.md).
-
+- **⚠️ Contribute (WIP):** 
 
 ---
 

@@ -10,6 +10,7 @@
 <div align="center">
     <img src="App-Assets/air-ban.png" alt="AirPosture banner" width="700" />
 </div>
+
 ---
 
 - **Intro**: An iOS app turns your AirPods into a real-time posture coach — giving you gentle nudges to sit better, move more, and reduce neck strain throughout the day.

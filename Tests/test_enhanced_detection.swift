@@ -55,7 +55,7 @@ func isAirPodsDevice(_ normalizedName: String) -> Bool {
 // Test cases for problematic device names
 let testCases = [
     // Original problematic cases
-    "Sample AirPods",
+    "Allen's AirPods",
     "José's AirPods Pro",
     "AirPods Pro\u{200B}", // Zero-width space
     "My Pro AirPods",

@@ -1,7 +1,7 @@
 import Foundation
 
 enum BackgroundConstants {
-    static let backgroundRefreshIdentifier = "com.example.airposture.background-refresh"
+    static let backgroundRefreshIdentifier = "com.allenleee.AirPosture.background-refresh"
     static let backgroundRefreshInterval: TimeInterval = 15 * 60
     static let taskDuration: TimeInterval = 25.0
     static let maxTotalTasks = 10

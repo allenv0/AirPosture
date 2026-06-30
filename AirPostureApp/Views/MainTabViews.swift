@@ -41,7 +41,7 @@ struct FitnessComingSoonView: View {
 
                 Spacer()
 
-                Link("Stay tuned for updates", destination: URL(string: "https://example.com")!)
+                Link("Stay tuned for updates", destination: URL(string: "https://x.com/allenleexyz")!)
                     .font(.caption)
                     .foregroundColor(SettingsColors.secondaryText(for: colorScheme).opacity(0.7))
                     .padding(.bottom, 40)
@@ -139,7 +139,7 @@ struct SettingsRootView: View {
                                 icon: "hand.thumbsup",
                                 iconColor: .pink,
                                 title: "Feedback",
-                                subtitle: "Contact the maintainer",
+                                subtitle: "Contact Allen Lee",
                                 colorScheme: colorScheme
                             ) {
                                 FeedbackSettingsView(colorScheme: colorScheme)

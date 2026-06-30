@@ -5,9 +5,7 @@ echo "  🚀 AIRPOSTURE DYNAMIC ISLAND - REBUILD & TEST NOW"
 echo "═══════════════════════════════════════════════════════════════════════════"
 echo ""
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-cd "$REPO_ROOT"
+cd /Users/Allen/AirPosture-TestFlight
 
 echo "🔍 CHECKING FIXES..."
 echo ""
@@ -91,3 +89,4 @@ echo ""
 echo "═══════════════════════════════════════════════════════════════════════════"
 echo "🚀 You're ready! Launch the app and start a session to see the Dynamic Island!"
 echo "═══════════════════════════════════════════════════════════════════════════"
+

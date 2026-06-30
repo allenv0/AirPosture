@@ -136,12 +136,16 @@ class NotificationManager: ObservableObject {
     // MARK: - Posture Notifications
     func sendPostureWarningNotification() {
         Logger.notifications.debug("Attempting to send posture warning notification - isEnabled: \(self.isNotificationEnabled), mode: \(String(describing: self.notificationMode))")
+        
+        // Play audio cue immediately — AudioServicesPlaySystemSound doesn't need
+        // notification permission. Don't gate it behind isNotificationEnabled or
+        // notificationMode; those only control the UNNotification delivery.
+        playAudioCue(soundID: 1304)
+        
         guard isNotificationEnabled, notificationMode == .realTime else {
-            Logger.notifications.warning("Warning notification not sent - notifications disabled or not in real-time mode")
+            Logger.notifications.warning("UNNotification not sent - notifications disabled or not in real-time mode (audio cue played)")
             return
         }
-        
-        playAudioCue(soundID: 1304)
         
         let content = UNMutableNotificationContent()
         content.title = "Poor Posture Detected"
@@ -166,12 +170,16 @@ class NotificationManager: ObservableObject {
     
     func sendHapticStartNotification() {
         Logger.notifications.debug("Attempting to send haptic start notification - isEnabled: \(self.isNotificationEnabled), mode: \(String(describing: self.notificationMode))")
+        
+        // Play audio cue immediately — AudioServicesPlaySystemSound doesn't need
+        // notification permission. Don't gate it behind isNotificationEnabled or
+        // notificationMode; those only control the UNNotification delivery.
+        playAudioCue(soundID: 1007)
+        
         guard isNotificationEnabled, notificationMode == .realTime else {
-            Logger.notifications.warning("Haptic start notification not sent - notifications disabled or not in real-time mode")
+            Logger.notifications.warning("UNNotification not sent - notifications disabled or not in real-time mode (audio cue played)")
             return
         }
-        
-        playAudioCue(soundID: 1007)
         
         let content = UNMutableNotificationContent()
         content.title = "Haptic Feedback Started"

@@ -17,7 +17,7 @@ import Foundation
 ///   .notice   – significant events that deserve attention
 extension Logger {
     /// The reverse-DNS subsystem identifier used by all AirPosture loggers.
-    static let subsystem = Bundle.main.bundleIdentifier ?? "com.example.airposture"
+    static let subsystem = Bundle.main.bundleIdentifier ?? "com.allenleee.AirPosturePro"
 
     /// Motion tracking lifecycle and sensor data.
     static let motion = Logger(subsystem: subsystem, category: "MotionTracking")

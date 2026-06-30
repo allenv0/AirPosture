@@ -133,7 +133,7 @@ print("\n3️⃣ Testing Device Detection Scenarios")
 print(String(repeating: "-", count: 30))
 
 let testDeviceNames = [
-    "Sample AirPods",        // Special characters
+    "Allen's AirPods",        // Special characters
     "José's AirPods Pro",     // International characters
     "Basic AirPods",          // Simple case
     "AirPods Pro\u{200B}"     // Invisible characters

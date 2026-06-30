@@ -91,13 +91,12 @@ class MemoryPressureResponder: ObservableObject, MemoryPressureResponderProtocol
     }
     
     // MARK: - Private Properties
-    private let logger = Logger(subsystem: "com.example.airposture", category: "MemoryPressureResponder")
+    private let logger = Logger(subsystem: "com.allenleee.AirPosture", category: "MemoryPressureResponder")
     private var degradationHistory: [DegradationEvent] = []
     private let maxHistorySize = 100
     
     // Feature controllers
     private weak var motionManager: HeadphoneMotionManager?
-    private weak var enhancedBackgroundManager: EnhancedBackgroundManager?
     private weak var backgroundTaskManager: BackgroundTaskManager?
     private weak var audioBackgroundManager: AudioBackgroundManager?
     
@@ -152,12 +151,10 @@ class MemoryPressureResponder: ObservableObject, MemoryPressureResponderProtocol
     // MARK: - Public Methods
     func setManagers(
         motionManager: HeadphoneMotionManager?,
-        enhancedBackgroundManager: EnhancedBackgroundManager?,
         backgroundTaskManager: BackgroundTaskManager?,
         audioBackgroundManager: AudioBackgroundManager?
     ) {
         self.motionManager = motionManager
-        self.enhancedBackgroundManager = enhancedBackgroundManager
         self.backgroundTaskManager = backgroundTaskManager
         self.audioBackgroundManager = audioBackgroundManager
         
@@ -294,10 +291,7 @@ class MemoryPressureResponder: ObservableObject, MemoryPressureResponderProtocol
         applyModerateDegradation()
         
         // Reduce background tasks
-        if let enhancedManager = enhancedBackgroundManager {
-            // Note: This would require adding a method to reduce background tasks
-            degradedFeatures.insert(.backgroundTasksReduced)
-        }
+        degradedFeatures.insert(.backgroundTasksReduced)
         
         // Disable background audio
         if let audioManager = audioBackgroundManager {

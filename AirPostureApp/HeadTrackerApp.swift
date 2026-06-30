@@ -60,8 +60,6 @@ struct AirPostureApp: App {
 
                     AudioBackgroundManager.shared.disableBackgroundAudio()
 
-                    EnhancedBackgroundManager.shared.stopBackgroundTracking()
-
                     Logger.general.info("Immediate termination cleanup completed")
                 }
                 #endif

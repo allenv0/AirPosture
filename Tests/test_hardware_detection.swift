@@ -100,7 +100,7 @@ print(String(repeating: "=", count: 60))
 let testScenarios: [(deviceName: String, hasMotion: Bool, expectedModel: MockAirPodsModel, description: String)] = [
     // AirPods Pro scenarios
     ("AirPods Pro", true, .airPodsPro, "Standard AirPods Pro"),
-    ("Sample AirPods Pro", true, .airPodsPro, "Custom named AirPods Pro"),
+    ("Allen's AirPods Pro", true, .airPodsPro, "Custom named AirPods Pro"),
     ("AirPods Pro 2", true, .airPodsPro2, "AirPods Pro 2nd generation"),
     ("José's AirPods Pro 2", true, .airPodsPro2, "International + Pro 2"),
 
@@ -176,7 +176,7 @@ let hybridTestScenarios: [(deviceName: String, hasMotion: Bool, enhancedEnabled:
     ("Bose Killer 5000", true, false, "Obscure name + hardware detection only"),
 
     // Cases that need enhanced detection fallback
-    ("Sample AirPods", false, true, "Custom name + enhanced detection"),
+    ("Allen's AirPods", false, true, "Custom name + enhanced detection"),
     ("José's AirPods Pro", false, true, "International + enhanced detection"),
     ("AirPods™ Pro", false, true, "Special chars + enhanced detection"),
 

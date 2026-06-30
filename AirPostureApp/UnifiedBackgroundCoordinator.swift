@@ -21,6 +21,7 @@ protocol BackgroundMotionProvider: AnyObject {
     var isDeviceConnected: Bool { get }
     var hasActiveSession: Bool { get }
     func performBackgroundUpdate()
+    func updateBackgroundSession()
     func handleCoordinatorDidEnterBackground()
     func handleCoordinatorWillEnterForeground()
 }
@@ -428,7 +429,7 @@ class UnifiedBackgroundCoordinator: ObservableObject {
             await createBackgroundTask()
         }
 
-        motionProvider?.performBackgroundUpdate()
+        motionProvider?.updateBackgroundSession()
 
         await updateTrackingStatus()
 
@@ -482,6 +483,15 @@ class UnifiedBackgroundCoordinator: ObservableObject {
         } else {
             connectionStatus = currentAppLifecycleState == .background ? "Background ready" : "Foreground mode"
             sessionStatistics = "No active session"
+        }
+    }
+
+    /// Returns a human-readable status string for the background tracking UI.
+    func getBackgroundStatus() -> String {
+        if isTrackingActive {
+            return "Active - Background tracking via coordinator"
+        } else {
+            return "Foreground mode"
         }
     }
 

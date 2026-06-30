@@ -3,7 +3,7 @@ import SwiftUI
 struct BackgroundTrackingStatusView: View {
     @ObservedObject private var backgroundTaskManager = BackgroundTaskManager.shared
     @ObservedObject private var audioBackgroundManager = AudioBackgroundManager.shared
-    @ObservedObject private var enhancedBackgroundManager = EnhancedBackgroundManager.shared
+    @ObservedObject private var unifiedCoordinator = UnifiedBackgroundCoordinator.shared
     @State private var showingBackgroundInfo = false
     
     var body: some View {
@@ -50,8 +50,8 @@ struct BackgroundTrackingStatusView: View {
     }
     
     private var backgroundStatusText: String {
-        if enhancedBackgroundManager.isBackgroundTrackingActive {
-            return "Active - Enhanced background tracking"
+        if unifiedCoordinator.isTrackingActive {
+            return "Active - Background tracking via coordinator"
         } else if audioBackgroundManager.isAudioSessionActive {
             return "Ready - Audio session configured"
         } else {
@@ -67,10 +67,10 @@ struct BackgroundTrackingStatusView: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
 
-                    Text("\(enhancedBackgroundManager.backgroundTaskCount)")
+                    Text("\(unifiedCoordinator.activeTaskCount)")
                         .font(.title3)
                         .fontWeight(.semibold)
-                        .foregroundColor(enhancedBackgroundManager.isBackgroundTrackingActive ? .green : .primary)
+                        .foregroundColor(unifiedCoordinator.isTrackingActive ? .green : .primary)
                 }
 
                 Spacer()
@@ -80,7 +80,7 @@ struct BackgroundTrackingStatusView: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
 
-                    Text(enhancedBackgroundManager.getBackgroundStatus())
+                    Text(unifiedCoordinator.getBackgroundStatus())
                         .font(.caption)
                         .fontWeight(.medium)
                         .foregroundColor(.primary)
@@ -213,10 +213,10 @@ struct BackgroundTrackingInfoSheet: View {
                             .font(.caption)
                             .foregroundColor(.secondary)
 
-                        Text("\(EnhancedBackgroundManager.shared.backgroundTaskCount)")
+                        Text("\(UnifiedBackgroundCoordinator.shared.activeTaskCount)")
                             .font(.title3)
                             .fontWeight(.semibold)
-                            .foregroundColor(EnhancedBackgroundManager.shared.isBackgroundTrackingActive ? .green : .primary)
+                            .foregroundColor(UnifiedBackgroundCoordinator.shared.isTrackingActive ? .green : .primary)
                     }
 
                     Spacer()
@@ -226,7 +226,7 @@ struct BackgroundTrackingInfoSheet: View {
                             .font(.caption)
                             .foregroundColor(.secondary)
 
-                        Text(EnhancedBackgroundManager.shared.getBackgroundStatus())
+                        Text(UnifiedBackgroundCoordinator.shared.getBackgroundStatus())
                             .font(.caption)
                             .fontWeight(.medium)
                             .foregroundColor(.primary)

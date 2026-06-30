@@ -16,7 +16,7 @@ class TimerResourceTracker: ObservableObject {
     private var activeTimers: [String: TimerResource] = [:]
     private var timerHistory: [TimerEvent] = []
     private let maxHistorySize = 1000
-    private let logger = Logger(subsystem: "com.example.airposture", category: "TimerTracker")
+    private let logger = Logger(subsystem: "com.allenleee.AirPosture", category: "TimerTracker")
     
     // Leak detection thresholds
     private let maxTimerAge: TimeInterval = 300 // 5 minutes

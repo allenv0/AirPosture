@@ -74,7 +74,7 @@ var detectionSystem = MockDetectionSystem()
 
 // Test scenarios
 let testScenarios = [
-    ("Sample AirPods", "Special characters - should work with enhanced"),
+    ("Allen's AirPods", "Special characters - should work with enhanced"),
     ("José's AirPods Pro", "International characters - should work with enhanced"),
     ("Beats Studio Pro", "Beats device - should work with enhanced only"),
     ("Basic AirPods", "Simple case - should work with both"),

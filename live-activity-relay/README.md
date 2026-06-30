@@ -10,7 +10,7 @@ Copy `.env.example` and set values:
 - `APNS_TEAM_ID`: Apple Developer Team ID
 - `APNS_KEY_ID`: APNs Auth Key ID
 - `APNS_PRIVATE_KEY_PATH` or `APNS_PRIVATE_KEY`: `.p8` key material
-- `APP_BUNDLE_ID`: iOS app bundle id (example: `com.example.airposture`)
+- `APP_BUNDLE_ID`: iOS app bundle id (example: `com.allenleee.AirPosturePro`)
 - `RELAY_API_KEY`: shared secret (optional but recommended)
 - `REGISTRATION_STORE_PATH`: durable registration store path (default: `data/registrations.json`)
 - `REGISTRATION_MAX_AGE_SECONDS`: stale registration pruning age (default: 12 hours)

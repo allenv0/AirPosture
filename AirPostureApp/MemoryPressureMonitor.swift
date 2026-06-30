@@ -52,7 +52,7 @@ class MemoryPressureMonitor: ObservableObject {
     // MARK: - Private Properties
     private var memoryPressureSource: DispatchSourceMemoryPressure?
     private var memoryMonitoringTimer: Timer?
-    private let logger = Logger(subsystem: "com.example.airposture", category: "MemoryMonitor")
+    private let logger = Logger(subsystem: "com.allenleee.AirPosture", category: "MemoryMonitor")
     
     // Memory tracking
     private var baselineMemory: UInt64 = 0

@@ -551,7 +551,7 @@ struct FeedbackSettingsView: View {
         }
     }
 
-    private static let feedbackEmail = "support.com"
+    private static let feedbackEmail = "allenleexyz@gmail.com"
 
     private func openEmail(subject: String) {
         let email = Self.feedbackEmail

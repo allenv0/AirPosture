@@ -124,7 +124,7 @@ struct LiveActivityTests {
         tilt: Double,
         lean: Double,
         avatarAssetName: String = "bear-neck",
-        userDisplayName: String? = "Sample",
+        userDisplayName: String? = "Allen",
         paused: Bool = false
     ) -> AirPostureLiveActivityPresentation {
         AirPostureLiveActivityPresentation(
@@ -157,7 +157,7 @@ struct LiveActivityTests {
             attributes: AirPostureActivityAttributes(
                 sessionId: UUID(),
                 avatarAssetName: "bear-neck",
-                userDisplayName: "Sample",
+                userDisplayName: "Allen",
                 sessionStartTime: Date()
             ),
             state: AirPostureActivityAttributes.ContentState(

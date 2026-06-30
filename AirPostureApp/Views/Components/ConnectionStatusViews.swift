@@ -48,12 +48,14 @@ struct ConnectedDeviceInfoView: View, Equatable {
     let isConnected: Bool
     let hasMotionCapability: Bool
     let connectedDeviceName: String
+    let airPodsModel: AirPodsModel
     let colorScheme: ColorScheme?
     
     static func == (lhs: ConnectedDeviceInfoView, rhs: ConnectedDeviceInfoView) -> Bool {
         lhs.isConnected == rhs.isConnected &&
         lhs.hasMotionCapability == rhs.hasMotionCapability &&
         lhs.connectedDeviceName == rhs.connectedDeviceName &&
+        lhs.airPodsModel == rhs.airPodsModel &&
         lhs.colorScheme == rhs.colorScheme
     }
     
@@ -74,7 +76,17 @@ struct ConnectedDeviceInfoView: View, Equatable {
     }
     
     private var deviceText: String {
-        hasMotionCapability ? connectedDeviceName : "AirPods 1/2 (Limited)"
+        // Prefer the detected model name ("AirPods Pro", "AirPods 3", etc.)
+        // Fall back to the raw device name (e.g. "Allen's AirPods Pro") if available,
+        // or a generic placeholder.
+        let modelName = airPodsModel.rawValue
+        if airPodsModel != .unknown {
+            return modelName
+        }
+        if hasMotionCapability {
+            return connectedDeviceName.isEmpty ? "AirPods" : connectedDeviceName
+        }
+        return "AirPods 1/2 (Limited)"
     }
     
     private var deviceSubtext: String {

@@ -276,7 +276,7 @@ struct LiveActivityColorTests {
             attributes: AirPostureActivityAttributes(
                 sessionId: UUID(),
                 avatarAssetName: "bear-neck",
-                userDisplayName: "Sample",
+                userDisplayName: "Allen",
                 sessionStartTime: Date()
             ),
             state: AirPostureActivityAttributes.ContentState(

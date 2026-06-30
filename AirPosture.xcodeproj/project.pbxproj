@@ -46,7 +46,6 @@
 		51C454D60365C01B7A211AA6 /* ARSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA163F302D6E3615F472371 /* ARSessionManager.swift */; };
 		51F98F3CA284B7CEDDFB888A /* MainTabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8007190138A1E2785E356FCB /* MainTabViews.swift */; };
 		529ADE86F7D0C0962A8C4363 /* StaticOrbitBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A192BEC3AA6BF936F4006C /* StaticOrbitBackgroundView.swift */; };
-		5379918269D4A17EFA897F50 /* ConnectionDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D1D0BCF4BA2F404C576FB /* ConnectionDetectionService.swift */; };
 		55FD9A5BE4E66EBA6D263483 /* ARSessionLifecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC6C918666A98EB413BCAE0 /* ARSessionLifecycleTests.swift */; };
 		58EB80AD6BB6C201A6178147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F756A95F7D69050553DF22 /* Assets.xcassets */; };
 		5B1BF335473F90B9E3E08C26 /* SettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090125B8B379053C8A8D6F83 /* SettingsViews.swift */; };
@@ -99,7 +98,6 @@
 		B0A1AD8DCA4DFA8C444DED32 /* AirPostureActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E964F67D84FA039E1BC8B7D /* AirPostureActivityAttributes.swift */; };
 		B0C1EBBD6050EE935D75D8F2 /* PostureColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8606D7BBA3E6FA0209872A7F /* PostureColorsTests.swift */; };
 		B403DE1A13A7F7C7F1005D66 /* SessionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1700EFC8DA1928AD8B2BD /* SessionHistoryView.swift */; };
-		B45C3F6F797148F75B1D6AF2 /* PostureSettingsComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697BE79DCCBB85F4EF11EF2 /* PostureSettingsComponents.swift */; };
 		B6CCED66432EA961A0ED70D0 /* SessionStoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E385AE21DF89971C44A787A /* SessionStoring.swift */; };
 		BA873A769D9A179E37A65C20 /* DelayedTaskBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D2D939332BD8565A6ED07 /* DelayedTaskBagTests.swift */; };
 		BF7F15866B8404C3D27FDE27 /* AirPodsDropdownOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A538D382E08C8DEC91A0DD /* AirPodsDropdownOverlayView.swift */; };
@@ -120,11 +118,9 @@
 		D004D030A142CF2F0E4658F6 /* HeadVisualizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8683C834D3C0B605F8D0DE /* HeadVisualizationView.swift */; };
 		D0561E659EE6CAF9C42C1A97 /* MotionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C8C08C5C23E77A8F4D8D22 /* MotionConstants.swift */; };
 		D14F7463BDBF3E7B82CB863B /* MotionTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09A7889D5CA4326201F15C /* MotionTracking.swift */; };
-		D40973BDD87C2B6D009289F2 /* EnhancedBackgroundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF5B803FC1D93D476BF94E0 /* EnhancedBackgroundManager.swift */; };
 		DBF0AC3EBF830A34AB2E0203 /* PostureHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C6AD76B4AA5C3BA9CAD233 /* PostureHomeView.swift */; };
 		E033E6B1BBC9253E731B62AF /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429E12F95EFF067FD22035D /* AppLogger.swift */; };
 		E10516CB2A2AFF75BCD61C50 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C438807905D96A59C500FA08 /* AnalyticsManager.swift */; };
-		E22223DB4768EBBEE7139B72 /* BackgroundManagerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4833FB9E5E773FE8B6C96BE5 /* BackgroundManagerCoordinator.swift */; };
 		E54ED4830671848387029199 /* SilentAudioGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F07CDF01301C4AEE1BDC43 /* SilentAudioGenerator.swift */; };
 		E5D4E73F115996933F853BFB /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231420D376D3D410AE364C7B /* RealityKit.framework */; };
 		E7D5467BC728DD13EECF0F28 /* StretchTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216F1D5EF333480A9CC170B /* StretchTypes.swift */; };
@@ -140,6 +136,14 @@
 		FB80545ED21FDE0BF6DB3E5F /* PremiumButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AB9F5052482DE2B0E8C85F /* PremiumButtonView.swift */; };
 		FBBED4EE14F6A0B5671D078C /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7914F4475E8269C9AF767CC9 /* ARViewContainer.swift */; };
 		FBD4E3AE96AA2750C7AE8B6E /* PostureEvaluationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DBC1215913E91EE80587AC /* PostureEvaluationService.swift */; };
+		A1B2C3D4E5F6A7B8C9D0E1F2 /* HeadphoneConnectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2B3C4D5E6F7A8B9C0D1E2 /* HeadphoneConnectionCoordinator.swift */; };
+		C3D4E5F6A7B8C9D0E1F2A3B4 /* HeadphoneMotionPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D2E3F4A5B6C7D8E9F0A1B2 /* HeadphoneMotionPipeline.swift */; };
+		E5F6A7B8C9D0E1F2A3B4C5D6 /* MotionHealthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2A3B4C5D6E7F8A9B0C1D2 /* MotionHealthService.swift */; };
+		A7B8C9D0E1F2A3B4C5D6E7F8 /* PostureTrackingSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3C4D5E6F7A8B9C0D1E2F3 /* PostureTrackingSessionController.swift */; };
+		C2D3E4F5A6B7C8D9E0F1A2B3 /* PostureStatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D3E4F5A6B7C8D9E0F1A2 /* PostureStatusCard.swift */; };
+		E4F5A6B7C8D9E0F1A2B3C4D5 /* LivePreviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E4F5A6B7C8D9E0F1A2B3C4 /* LivePreviewCard.swift */; };
+		A6B7C8D9E0F1A2B3C4D5E6F7 /* PostureThresholdCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A6B7C8D9E0F1A2B3C4D5E6 /* PostureThresholdCard.swift */; };
+		C8D9E0F1A2B3C4D5E6F7A8B9 /* PostureCalibrationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C8D9E0F1A2B3C4D5E6F7A8 /* PostureCalibrationCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,8 +179,15 @@
 
 /* Begin PBXFileReference section */
 		01E33A10CD99A86D948569BB /* SessionTimingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTimingService.swift; sourceTree = "<group>"; };
+		A2B3C4D5E6F7A8B9C0D1E2F3 /* PostureTrackingSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureTrackingSessionController.swift; sourceTree = "<group>"; };
+		B1C2D3E4F5A6B7C8D9E0F1A2 /* PostureStatusCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureStatusCard.swift; sourceTree = "<group>"; };
+		B7C8D9E0F1A2B3C4D5E6F7A8 /* PostureCalibrationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureCalibrationCard.swift; sourceTree = "<group>"; };
+		C1D2E3F4A5B6C7D8E9F0A1B2 /* HeadphoneMotionPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadphoneMotionPipeline.swift; sourceTree = "<group>"; };
+		D3E4F5A6B7C8D9E0F1A2B3C4 /* LivePreviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePreviewCard.swift; sourceTree = "<group>"; };
+		E1F2A3B4C5D6E7F8A9B0C1D2 /* MotionHealthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionHealthService.swift; sourceTree = "<group>"; };
+		F1A2B3C4D5E6F7A8B9C0D1E2 /* HeadphoneConnectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadphoneConnectionCoordinator.swift; sourceTree = "<group>"; };
+		F5A6B7C8D9E0F1A2B3C4D5E6 /* PostureThresholdCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureThresholdCard.swift; sourceTree = "<group>"; };
 		0250A0FA5129777834D5493B /* HeadTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTrackerApp.swift; sourceTree = "<group>"; };
-		0697BE79DCCBB85F4EF11EF2 /* PostureSettingsComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureSettingsComponents.swift; sourceTree = "<group>"; };
 		084759D571B03A3DD59AC23D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		090125B8B379053C8A8D6F83 /* SettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViews.swift; sourceTree = "<group>"; };
 		0BDC99BA8A6A3BFDB7135DFE /* PlatformWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformWrapperView.swift; sourceTree = "<group>"; };
@@ -203,7 +214,6 @@
 		44DC0E0292209A2B1F18F351 /* BackgroundTrackingStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTrackingStatusView.swift; sourceTree = "<group>"; };
 		466487B05BB1297AE86CA306 /* LiveActivityComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityComponents.swift; sourceTree = "<group>"; };
 		47BE650588F746830C160547 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4833FB9E5E773FE8B6C96BE5 /* BackgroundManagerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundManagerCoordinator.swift; sourceTree = "<group>"; };
 		4CA2C7FBAD75D9ECA978119E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		4E99CB6E7C8418E7DD130AD6 /* LiveActivityPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityPresentation.swift; sourceTree = "<group>"; };
 		5099B871BE69A06CFA35873C /* BackgroundTaskTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTaskTracker.swift; sourceTree = "<group>"; };
@@ -256,7 +266,6 @@
 		BD2E93280B46C4107E507C7B /* TransitionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCoordinator.swift; sourceTree = "<group>"; };
 		BE35A49F2EB12CC607EE5B49 /* UserDefaultsKeysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeysTests.swift; sourceTree = "<group>"; };
 		BEA4ECBAFFA2783942F1F570 /* CalibrationManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationManaging.swift; sourceTree = "<group>"; };
-		BF7D1D0BCF4BA2F404C576FB /* ConnectionDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDetectionService.swift; sourceTree = "<group>"; };
 		BFBB021A4FAEA423D4752A6C /* StartButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonState.swift; sourceTree = "<group>"; };
 		C07263CC8A8E39CC0AE15B7D /* LiveActivityPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityPalette.swift; sourceTree = "<group>"; };
 		C438807905D96A59C500FA08 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
@@ -265,7 +274,6 @@
 		C78EA8CF45D180DFBE787241 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CA37D408E5ADE44163363158 /* AirPostureLiveActivity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AirPostureLiveActivity.entitlements; sourceTree = "<group>"; };
 		CABC68BEF0105507F64DA482 /* HeadTrackerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTrackerAppTests.swift; sourceTree = "<group>"; };
-		CCF5B803FC1D93D476BF94E0 /* EnhancedBackgroundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedBackgroundManager.swift; sourceTree = "<group>"; };
 		CDA163F302D6E3615F472371 /* ARSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSessionManager.swift; sourceTree = "<group>"; };
 		CFD8DF6F0E708C074A654486 /* SettingsDesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDesignTokens.swift; sourceTree = "<group>"; };
 		D02FECC32F1D89057391385C /* LatestSessionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestSessionRowView.swift; sourceTree = "<group>"; };
@@ -355,10 +363,13 @@
 			isa = PBXGroup;
 			children = (
 				E51AADB62E73C010B6425F61 /* CalibrationService.swift */,
-				BF7D1D0BCF4BA2F404C576FB /* ConnectionDetectionService.swift */,
+				F1A2B3C4D5E6F7A8B9C0D1E2 /* HeadphoneConnectionCoordinator.swift */,
+				C1D2E3F4A5B6C7D8E9F0A1B2 /* HeadphoneMotionPipeline.swift */,
 				ADA686600089FE3CEE8A1071 /* LiveActivitySyncService.swift */,
 				273E0F57DEF01EA131F5AD21 /* MotionHardwareDetector.swift */,
+				E1F2A3B4C5D6E7F8A9B0C1D2 /* MotionHealthService.swift */,
 				E4DBC1215913E91EE80587AC /* PostureEvaluationService.swift */,
+				A2B3C4D5E6F7A8B9C0D1E2F3 /* PostureTrackingSessionController.swift */,
 				01E33A10CD99A86D948569BB /* SessionTimingService.swift */,
 			);
 			path = Motion;
@@ -427,7 +438,6 @@
 				7914F4475E8269C9AF767CC9 /* ARViewContainer.swift */,
 				72F756A95F7D69050553DF22 /* Assets.xcassets */,
 				8083A08B38E5FEE9B1BDA2D0 /* AudioBackgroundManager.swift */,
-				4833FB9E5E773FE8B6C96BE5 /* BackgroundManagerCoordinator.swift */,
 				950A927A706E13D20948CC6D /* BackgroundManagerMigration.md */,
 				BCAB17CE945AD9FDFB6DAE8C /* BackgroundTaskManager.swift */,
 				5099B871BE69A06CFA35873C /* BackgroundTaskTracker.swift */,
@@ -437,7 +447,6 @@
 				941F4BCBE1882F141A4EB6EB /* BodyPoseProcessor.swift */,
 				1222AFC295BC76FEFA7174E3 /* ContentView.swift */,
 				1F43E21246CDA4ED62B55B62 /* DelayedTaskBag.swift */,
-				CCF5B803FC1D93D476BF94E0 /* EnhancedBackgroundManager.swift */,
 				ACDC89BBF225FE4F026FEF19 /* ForegroundTransitionMonitor.swift */,
 				EF9CAD5BF18A0185E173EE53 /* GoogleService-Info.plist */,
 				149B3F629A9FE9F3BBEF9FED /* HeadphoneMotionManager.swift */,
@@ -447,6 +456,7 @@
 				5DDC43841C5D437C38DF37E5 /* Info.plist */,
 				084759D571B03A3DD59AC23D /* LaunchScreen.storyboard */,
 				EEC998F519AFFB4337F5D3D3 /* LiveActivityController.swift */,
+				D3E4F5A6B7C8D9E0F1A2B3C4 /* LivePreviewCard.swift */,
 				D4F4F4ABE35E04DC1CBC185E /* MemoryMonitoringView.swift */,
 				F38262587ADEB55A56F58E17 /* MemoryPressureMonitor.swift */,
 				EAA57547FF399FAE9AB3A3A0 /* MemoryPressureResponder.swift */,
@@ -454,7 +464,9 @@
 				32DD8E6E18D7843C776D1508 /* NotificationSettingsComponents.swift */,
 				518D3F937A4730B3A8777CDC /* OnboardingFlowView.swift */,
 				1AA4B2C92C7648237FEB7FC3 /* PermissionChecklistViews.swift */,
-				0697BE79DCCBB85F4EF11EF2 /* PostureSettingsComponents.swift */,
+				B7C8D9E0F1A2B3C4D5E6F7A8 /* PostureCalibrationCard.swift */,
+				B1C2D3E4F5A6B7C8D9E0F1A2 /* PostureStatusCard.swift */,
+				F5A6B7C8D9E0F1A2B3C4D5E6 /* PostureThresholdCard.swift */,
 				683CCF2448B570C2833302CE /* RepCounter.swift */,
 				92714E9346A32CE7B30DBC1D /* RepCountingSettings.swift */,
 				CFD8DF6F0E708C074A654486 /* SettingsDesignTokens.swift */,
@@ -797,7 +809,6 @@
 				48510E238F09FEB3FF057D91 /* Avatar.swift in Sources */,
 				A613E45E7FFBDEC8C371F30E /* AvatarManaging.swift in Sources */,
 				9369418B287E598F5E8839B1 /* BackgroundConstants.swift in Sources */,
-				E22223DB4768EBBEE7139B72 /* BackgroundManagerCoordinator.swift in Sources */,
 				ED87518865A6CDFC545E28E4 /* BackgroundTaskManager.swift in Sources */,
 				4F0A35EB26EBE6A70F633853 /* BackgroundTaskTracker.swift in Sources */,
 				1B4D66995AEB471D945DDF4D /* BackgroundTrackingStatusView.swift in Sources */,
@@ -807,15 +818,21 @@
 				9D4DB3FC621085D908D3B7D3 /* BodyPoseProcessor.swift in Sources */,
 				CFD2CE3B396587DD83A1630D /* CalibrationManaging.swift in Sources */,
 				CEB6761ED77FB23CD734321B /* CalibrationService.swift in Sources */,
+				A1B2C3D4E5F6A7B8C9D0E1F2 /* HeadphoneConnectionCoordinator.swift in Sources */,
+				C3D4E5F6A7B8C9D0E1F2A3B4 /* HeadphoneMotionPipeline.swift in Sources */,
+				E5F6A7B8C9D0E1F2A3B4C5D6 /* MotionHealthService.swift in Sources */,
+				A7B8C9D0E1F2A3B4C5D6E7F8 /* PostureTrackingSessionController.swift in Sources */,
+				C2D3E4F5A6B7C8D9E0F1A2B3 /* PostureStatusCard.swift in Sources */,
+				E4F5A6B7C8D9E0F1A2B3C4D5 /* LivePreviewCard.swift in Sources */,
+				A6B7C8D9E0F1A2B3C4D5E6F7 /* PostureThresholdCard.swift in Sources */,
+				C8D9E0F1A2B3C4D5E6F7A8B9 /* PostureCalibrationCard.swift in Sources */,
 				3FB2FC14E058A23BE7CAAF8D /* Color+Hex.swift in Sources */,
-				5379918269D4A17EFA897F50 /* ConnectionDetectionService.swift in Sources */,
 				8D0AB4EB3A4034EC54BC3884 /* ConnectionMonitoring.swift in Sources */,
 				A2244ED22B1D8D7BED484D0C /* ConnectionStatusViews.swift in Sources */,
 				632A692082CE03E6F30CF00D /* ContentView.swift in Sources */,
 				8037D0E99FA5CAA246AE1761 /* ControlButtonsView.swift in Sources */,
 				F0B9F081880BD27A0C4A46A7 /* CosmicAuraBackgroundView.swift in Sources */,
 				13AA0B71255EB94951E991C3 /* DelayedTaskBag.swift in Sources */,
-				D40973BDD87C2B6D009289F2 /* EnhancedBackgroundManager.swift in Sources */,
 				9D1886D4890AB4796A43950C /* ForegroundTransitionMonitor.swift in Sources */,
 				5DF7597ABD460968DAF3F4CB /* HapticFeedbackController.swift in Sources */,
 				C1BCCB3B193450A8352E0970 /* HapticManager.swift in Sources */,
@@ -850,7 +867,6 @@
 				C0DA2B8DF7F486FBF511BDCE /* PostureHomeState.swift in Sources */,
 				DBF0AC3EBF830A34AB2E0203 /* PostureHomeView.swift in Sources */,
 				A09AAEB379806BEA6122F3FE /* PostureHomeViewModel.swift in Sources */,
-				B45C3F6F797148F75B1D6AF2 /* PostureSettingsComponents.swift in Sources */,
 				8BFB1EE4462BDB83D455EF9A /* PostureState.swift in Sources */,
 				ADD3A9794C028B6540B0DF27 /* PostureStateManaging.swift in Sources */,
 				FB80545ED21FDE0BF6DB3E5F /* PremiumButtonView.swift in Sources */,

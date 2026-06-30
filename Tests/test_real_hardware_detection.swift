@@ -98,7 +98,7 @@ let testScenarios: [(deviceName: String, hasMotion: Bool, description: String)] 
 
     // Motion-capable devices with recognizable names (tie-breaker)
     ("AirPods Pro", true, "Standard AirPods Pro with motion"),
-    ("Sample AirPods Max", true, "Custom named AirPods Max with motion"),
+    ("Allen's AirPods Max", true, "Custom named AirPods Max with motion"),
     ("AirPods 3", true, "Standard AirPods 3 with motion"),
     ("Beats Studio Pro", true, "Beats with motion sensors"),
 

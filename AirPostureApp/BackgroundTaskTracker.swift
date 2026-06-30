@@ -18,7 +18,7 @@ class BackgroundTaskTracker: ObservableObject {
     private var activeTasks: [UIBackgroundTaskIdentifier: BackgroundTaskResource] = [:]
     private var taskHistory: [BackgroundTaskEvent] = []
     private let maxHistorySize = 500
-    private let logger = Logger(subsystem: "com.example.airposture", category: "BackgroundTaskTracker")
+    private let logger = Logger(subsystem: "com.allenleee.AirPosture", category: "BackgroundTaskTracker")
     
     // Leak detection thresholds
     private let maxTaskAge: TimeInterval = 30 // 30 seconds (iOS background limit)

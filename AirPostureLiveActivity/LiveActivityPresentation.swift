@@ -308,7 +308,7 @@ extension LiveActivitySnapshot {
         attributes: AirPostureActivityAttributes(
             sessionId: UUID(),
             avatarAssetName: "bear-neck",
-            userDisplayName: "Sample",
+            userDisplayName: "Allen",
             sessionStartTime: Date().addingTimeInterval(-14 * 60)
         ),
         state: AirPostureActivityAttributes.ContentState(
@@ -364,7 +364,7 @@ extension LiveActivitySnapshot {
         attributes: AirPostureActivityAttributes(
             sessionId: UUID(),
             avatarAssetName: "bear-neck",
-            userDisplayName: "Sample",
+            userDisplayName: "Allen",
             sessionStartTime: Date().addingTimeInterval(-18 * 60)
         ),
         state: AirPostureActivityAttributes.ContentState(

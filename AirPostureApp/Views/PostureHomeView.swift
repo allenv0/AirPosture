@@ -462,6 +462,7 @@ struct PostureHomeView: View {
                                                 isConnected: headphoneMotionManager.isDeviceConnected,
                                                 hasMotionCapability: headphoneMotionManager.hasMotionCapability,
                                                 connectedDeviceName: headphoneMotionManager.connectedDeviceName,
+                                                airPodsModel: headphoneMotionManager.airPodsModel,
                                                 colorScheme: colorScheme
                                             )
                                             .padding(.horizontal, 8)
@@ -470,6 +471,12 @@ struct PostureHomeView: View {
                                                 removal: .opacity
                                             ))
                                             .animation(.spring(response: 0.4, dampingFraction: 0.8), value: headphoneMotionManager.isDeviceConnected)
+                                        } else if !headphoneMotionManager.connectionStatus.contains("Not started") {
+                                            Text(headphoneMotionManager.connectionStatus)
+                                                .font(.caption)
+                                                .foregroundColor(.secondary)
+                                                .multilineTextAlignment(.center)
+                                                .padding(.horizontal, 8)
                                         }
                                    
                                          Spacer()

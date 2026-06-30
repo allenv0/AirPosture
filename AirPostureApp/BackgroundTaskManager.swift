@@ -14,7 +14,7 @@ class BackgroundTaskManager: ObservableObject {
     @Published private(set) var backgroundRefreshCount: Int = 0
 
     // MARK: - Private Properties
-    private let backgroundTaskIdentifier = "com.example.airposture.background-refresh"
+    private let backgroundTaskIdentifier = "com.allenleee.AirPosture.background-refresh"
     private weak var motionManager: HeadphoneMotionManager?
 
     // MARK: - Memory Management Properties

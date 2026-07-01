@@ -15,7 +15,7 @@
 
 - **Intro**: An iOS app turns your AirPods into a real-time posture coach — giving you gentle nudges to sit better, move more, and reduce neck strain throughout the day.
 - **Supported Devices** - AirPods Pro (all generations), AirPods (3rd generation and later), AirPods Max, and compatible Beats earphones that support spatial audio with dynamic head tracking. 
-- **iOS Testflight**: [Download link](https://testflight.apple.com/join/ATvtBUZH)
+- **iOS Testflight**: [Download link](https://testflight.apple.com/join/ATvtBUZH) — *currently points to version 0.3 (Build 27), not the latest 0.3 (Build 29 in this repo).*
 - **Website**: [https://airposture.github.io](https://airposture.github.io/)
 - **Follow on [X](https://x.com/allenleexyz)**
 - **Email**: allenleexyz@gmail.com
@@ -74,6 +74,15 @@ If AirPosture helps even a small number of people sit better, move better, and f
 </div>
 
 AirPods now include richer motion and medical-grade heart rate sensors, and Apple’s MLX framework enables private, low-latency AI models on iOS without cloud delays or privacy compromises.
+
+
+---
+
+## ❤️ by Thousands
+
+<div align="center">
+    <img src="App-Assets/air-media.png" alt="AirPosture demo animation" width="700" />
+</div>
 
 
 ---

@@ -18,6 +18,7 @@
 - **iOS Testflight**: [Download link](https://testflight.apple.com/join/ATvtBUZH) — *currently points to version 0.3 (Build 27), not the latest 0.3 (Build 29 in this repo).*
 - **Website**: [https://airposture.github.io](https://airposture.github.io/)
 - **Follow on [X](https://x.com/allenleexyz)**
+- **Discuss and share feedback on** [r/iosapps](https://www.reddit.com/r/iosapps/comments/1udtf6d/airposture_is_now_open_source_airpods_as_posture/)
 - **Email**: allenleexyz@gmail.com
 
 

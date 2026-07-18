@@ -42,7 +42,7 @@ The original plan was to keep developing AirPosture as a commercial product and 
 
 ### Spammers
 
-In the past few months, I’ve also seen unofficial “AirPosture” apps with aggressive paywalls, as well as online posts that are not affiliated with me or this project. Some have copied the name and branding while distributing modified versions of the original release or directing users to unknown downloads; some of those are malicious impersonations attempting to distribute malware. I reached out to almost all of them asking that they rename the software or take down the malware, but most either dismissively denied my request or ignored it entirely. This situation has even led Apple to repeatedly reject my own app during review, simply because others used the original open-source version and the “AirPosture” name on the App Store.
+In the past few months, I’ve also seen unofficial “AirPosture” apps with aggressive paywalls, as well as online posts that are not affiliated with me or this project. Some have copied the name and branding while distributing modified versions of the original release or directing users to unknown downloads; some of those are [malicious impersonations](https://www.reddit.com/r/macapps/comments/1mu1qeu/psa_be_careful_with_a_recent_increase_in_fake/) attempting to [distribute malware](https://apps.apple.com/tw/app/sit-straight-airposture/id6749489000). I reached out to almost all of them asking that they rename the software or take down the malware, but most either dismissively denied my request or ignored it entirely. This situation has even led Apple to repeatedly reject my own app during review, simply because others used the original open-source version and the “AirPosture” name on the App Store.
 
 ### Open it 100%
 

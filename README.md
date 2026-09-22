@@ -15,14 +15,13 @@
 
 - **Intro**: An iOS app turns your AirPods into a real-time posture coach — giving you gentle nudges to sit better, move more, and reduce neck strain throughout the day.
 - **Supported Devices** - AirPods Pro (all generations), AirPods (3rd generation and later), AirPods Max, and compatible Beats earphones that support spatial audio with dynamic head tracking. 
-- **iOS Testflight**: [Download link](https://testflight.apple.com/join/ATvtBUZH) — *currently points to version 0.3 (Build 27), not the latest 0.3 (Build 29 in this repo).*
 - **Website**: [https://airposture.github.io](https://airposture.github.io/)
-- **Follow on [X](https://x.com/allenleexyz)**
 - **Discuss and share feedback on** [r/iosapps](https://www.reddit.com/r/iosapps/comments/1udtf6d/airposture_is_now_open_source_airpods_as_posture/)
-- **Email**: allenleexyz@gmail.com
 
+📟 **A Note from Allen**:
+AirPosture is currently on hold. The urgency of my full-time work in AI safety has taken priority, and I'm also waiting to see how the next generation of camera-enabled AirPods evolves. I still firmly believe in the vision of AirPods as a personal, real-time AI coach. When the time is right, I'll return to the project with a new version built around the possibilities of the next generation of AirPods.
 
-  
+Thank you to everyone who has supported AirPosture. ❤️
 ---
 
 ## AirPosture is Now Fully Open Source
